@@ -6,5 +6,7 @@ target 'SwiftBase' do
   use_frameworks!
 
   # Pods for SwiftBase
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end
