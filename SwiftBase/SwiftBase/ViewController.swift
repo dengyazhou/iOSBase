@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         print("\(#file):\(#line):\(#function)");
         
         self.title = "第一个页面"
+        
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = HomeViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true);
     }
 
 
