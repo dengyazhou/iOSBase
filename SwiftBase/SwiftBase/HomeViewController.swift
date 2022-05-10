@@ -17,17 +17,26 @@ class HomeViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // MARK: 4、枚举
-        let vc = EnumViewController.init()
-        self.navigationController?.pushViewController(vc, animated: true)
+        // MARK: 10、枚举
+//        let vc = EnumViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
         
-        // MARK: 3、Class 和 Struct
+        // MARK: 12、闭包
+//        let vc = ClosuresViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 13、类和结构体
 //        let vc = ClassAndStructViewController.init()
 //        self.navigationController?.pushViewController(vc, animated: true)
         
-        // MARK: 2、闭包
-//        let vc = ClosuresViewController.init()
+        // MARK: 14、类和属性
+//        let vc = ClassAndPropertyViewController.init()
 //        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 15、方法
+        let vc = MethodViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
         
         // MARK: 1、截取字符串
 //        let str = "ABCDEFGHIJKLMN"
