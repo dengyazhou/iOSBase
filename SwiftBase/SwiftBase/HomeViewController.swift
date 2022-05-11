@@ -34,7 +34,19 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 15、方法
-        let vc = MethodViewController.init()
+//        let vc = MethodViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 16、继承
+//        let vc = InheritViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 17、多态
+//        let vc = PolymorphicViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 18、构造函数
+        let vc = ConstructorViewController.init()
         self.navigationController?.pushViewController(vc, animated: true)
         
         
