@@ -20,6 +20,7 @@
 		93792B48282B4F5200B802CB /* InheritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792B47282B4F5200B802CB /* InheritViewController.swift */; };
 		937EA5052823759200204D29 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EA5042823759200204D29 /* HomeViewController.swift */; };
 		937EA50828237EC400204D29 /* ClosuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937EA50728237EC400204D29 /* ClosuresViewController.swift */; };
+		93DA427D282E03F800E021A5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA427C282E03F800E021A5 /* MemoryViewController.swift */; };
 		93EC1241282B9E5D0085FC51 /* PolymorphicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1240282B9E5D0085FC51 /* PolymorphicViewController.swift */; };
 		93EC1244282BA8FF0085FC51 /* ConstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1243282BA8FF0085FC51 /* ConstructorViewController.swift */; };
 		D439BDFE1D84454FD4F5AF37 /* Pods_SwiftBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA37C88A5D45B909FA2C582 /* Pods_SwiftBase.framework */; };
@@ -42,6 +43,7 @@
 		93792B47282B4F5200B802CB /* InheritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritViewController.swift; sourceTree = "<group>"; };
 		937EA5042823759200204D29 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		937EA50728237EC400204D29 /* ClosuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresViewController.swift; sourceTree = "<group>"; };
+		93DA427C282E03F800E021A5 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		93EC1240282B9E5D0085FC51 /* PolymorphicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphicViewController.swift; sourceTree = "<group>"; };
 		93EC1243282BA8FF0085FC51 /* ConstructorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorViewController.swift; sourceTree = "<group>"; };
 		BA92E59D01048641114ABEED /* Pods-SwiftBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBase.release.xcconfig"; path = "Target Support Files/Pods-SwiftBase/Pods-SwiftBase.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				93792B46282B4F3600B802CB /* Inherit */,
 				93EC123F282B9DFE0085FC51 /* Polymorphic */,
 				93EC1242282BA8E70085FC51 /* Constructor */,
+				93DA427B282E03D000E021A5 /* Memory */,
 				930D277F2822D5DB0052BCD0 /* Main.storyboard */,
 				930D27822822D5DC0052BCD0 /* Assets.xcassets */,
 				930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */,
@@ -155,6 +158,14 @@
 				937EA50728237EC400204D29 /* ClosuresViewController.swift */,
 			);
 			path = Closures;
+			sourceTree = "<group>";
+		};
+		93DA427B282E03D000E021A5 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				93DA427C282E03F800E021A5 /* MemoryViewController.swift */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		93EC123F282B9DFE0085FC51 /* Polymorphic */ = {
@@ -301,6 +312,7 @@
 				93792B3F282A363A00B802CB /* MethodViewController.swift in Sources */,
 				937EA50828237EC400204D29 /* ClosuresViewController.swift in Sources */,
 				93792B48282B4F5200B802CB /* InheritViewController.swift in Sources */,
+				93DA427D282E03F800E021A5 /* MemoryViewController.swift in Sources */,
 				930D277E2822D5DB0052BCD0 /* ViewController.swift in Sources */,
 				932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */,
 				932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */,
