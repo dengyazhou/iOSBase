@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'OCBase' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for OCBase
+  
+#  pod 'AFNetworking'
+  pod 'ios-ntp'
+#  pod 'CocoaAsyncSocket'
+  
+#  pod 'IJKMediaPlayer'
+#  pod 'XMIJKMediaPlayer'
+
+  pod 'Masonry'
+#  pod 'YYKit'
+  pod 'YYText'
+  pod 'YYModel'
+  pod 'AFNetworking'
+  
+  pod "CTMediator"
+#  pod 'MGJRouter'
+
+#  pod 'LookinServer', :configurations => ['Debug']
+#  pod 'LookinServer', :path => '../../xmly_yz/LookinServer'
+
+end
