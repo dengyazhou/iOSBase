@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: 方法
 class MethodBoy {
     //期望一个变量、常量在创建初期，必须对其进行初始化处理
 //    var testInstance: String?
@@ -40,7 +41,7 @@ class MethodBoy {
     }
 }
 
-//类型方法
+//MARK: 类型方法
 class MethodWeapon {
     var weaponName: String = "新手武器"
     
@@ -65,7 +66,7 @@ class MethodWeapon {
     }
 }
 
-//下标方法
+//MARK: 下标方法
 class MethodPeople {
     var name: String = "Dancer"
     subscript(index: Int) -> String? {

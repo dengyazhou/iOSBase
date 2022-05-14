@@ -50,7 +50,11 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 19、内存管理
-        let vc = MemoryViewController.init()
+//        let vc = MemoryViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //MARK: 20、可选链
+        let vc = OptionalChainViewController.init()
         self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串

@@ -17,7 +17,7 @@ class ConstructorStudent {
 //        self.name = name
 //    }
     
-    var name: String?
+    var name: String? //可选类型，默认值为nil，所以是可以不用在构造器中初始化。
     init(name: String) {
         self.name = name
     }
@@ -27,7 +27,7 @@ class ConstructorStudent {
     }
 }
 
-//默认构造器
+//MARK: 默认构造器
 class ConstructorStudent1 {
     var name: String = "dancer"
     var age: Int = 19
@@ -36,7 +36,7 @@ class ConstructorStudent1 {
     }
 }
 
-//指定构造器
+//MARK: 指定构造器
 class ConstructorPerson {
     var name: String
     var age: Int
@@ -49,6 +49,7 @@ class ConstructorPerson {
     }
 }
 
+//MARK: 便捷构造器
 /*
  构造器链
  指定构造器必须调用其直接父类的指定构造器
@@ -121,8 +122,7 @@ class ConstructorITStudent: ConstructorStudent2 {
     }
 }
 
-
-//成员构造器
+//MARK: 成员构造器
 struct ConstructorPerson3 {
     var name: String
     var age: Int
@@ -131,6 +131,7 @@ struct ConstructorPerson3 {
     }
 }
 
+//MARK: 可失败构造器
 /*
  可失败构造器的一般形式
  init?(参数列表){初始化内容}
@@ -152,7 +153,7 @@ class ConstructorStudent3 {
     }
 }
 
-//析构函数
+//MARK: 析构函数
 class ConstructorPersonDeinit {
     var dataSource: [String] = []
     var filePath: String = ""

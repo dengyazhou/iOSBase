@@ -38,6 +38,7 @@ struct CPPerson {
     var age: Int = 19
 }
 
+// MARK: 存储属性
 //结构体无需手动添加构造方法。类类型如果你没有对你的属性进行初始化，必须手动添加构造方法来为属性进行初始化操作
 class CPGodWoman {
     var name: String //存储属性
@@ -49,6 +50,7 @@ struct CPGodMan {
     var name: String
 }
 
+// MARK: 延迟存储属性
 class CPDSMan {
     var name:String = "dancer"
     
@@ -60,6 +62,7 @@ class CPDSMan {
     }
 }
 
+// MARK: 计算属性
 class CPCircle {
     var radius: Double
     init(radius: Double) {
@@ -77,7 +80,7 @@ class CPCircle {
             self.radius = newValue/2
         }
     }
-    
+// MARK: 观察属性
     var color: String! {//观察属性
         willSet {
             print("即将被赋值的新值是\(newValue ?? "")")
@@ -88,6 +91,7 @@ class CPCircle {
     }
 }
 
+// MARK: 类型属性
 class CPHuman {//类型属性
     //定义类型属性时，必须使用计算属性，不能用存储属性
     class var planet: String {
