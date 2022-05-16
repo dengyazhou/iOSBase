@@ -15,6 +15,7 @@
 		930D27862822D5DC0052BCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */; };
 		932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */; };
 		932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F8DCF282961D7003E065E /* EnumViewController.swift */; };
+		935CAFC92831EA590094BFAE /* TypeCastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935CAFC82831EA590094BFAE /* TypeCastingViewController.swift */; };
 		93792B3C2829FF9000B802CB /* ClassAndPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792B3B2829FF9000B802CB /* ClassAndPropertyViewController.swift */; };
 		93792B3F282A363A00B802CB /* MethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792B3E282A363A00B802CB /* MethodViewController.swift */; };
 		93792B48282B4F5200B802CB /* InheritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792B47282B4F5200B802CB /* InheritViewController.swift */; };
@@ -39,6 +40,7 @@
 		930D27872822D5DC0052BCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructViewController.swift; sourceTree = "<group>"; };
 		932F8DCF282961D7003E065E /* EnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumViewController.swift; sourceTree = "<group>"; };
+		935CAFC82831EA590094BFAE /* TypeCastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCastingViewController.swift; sourceTree = "<group>"; };
 		93792B3B2829FF9000B802CB /* ClassAndPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndPropertyViewController.swift; sourceTree = "<group>"; };
 		93792B3E282A363A00B802CB /* MethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodViewController.swift; sourceTree = "<group>"; };
 		93792B47282B4F5200B802CB /* InheritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				93EC1242282BA8E70085FC51 /* Constructor */,
 				93DA427B282E03D000E021A5 /* Memory */,
 				939CEB8F282FF5F8006B8435 /* OptionalChain */,
+				935CAFC72831EA3F0094BFAE /* TypeCasting */,
 				930D277F2822D5DB0052BCD0 /* Main.storyboard */,
 				930D27822822D5DC0052BCD0 /* Assets.xcassets */,
 				930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */,
@@ -129,6 +132,14 @@
 				932F8DCF282961D7003E065E /* EnumViewController.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		935CAFC72831EA3F0094BFAE /* TypeCasting */ = {
+			isa = PBXGroup;
+			children = (
+				935CAFC82831EA590094BFAE /* TypeCastingViewController.swift */,
+			);
+			path = TypeCasting;
 			sourceTree = "<group>";
 		};
 		93792B3A2829FF4700B802CB /* ClassAndProperty */ = {
@@ -327,6 +338,7 @@
 				93DA427D282E03F800E021A5 /* MemoryViewController.swift in Sources */,
 				930D277E2822D5DB0052BCD0 /* ViewController.swift in Sources */,
 				932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */,
+				935CAFC92831EA590094BFAE /* TypeCastingViewController.swift in Sources */,
 				932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */,
 				93792B3C2829FF9000B802CB /* ClassAndPropertyViewController.swift in Sources */,
 				930D277A2822D5DB0052BCD0 /* AppDelegate.swift in Sources */,

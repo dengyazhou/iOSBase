@@ -53,8 +53,12 @@ class HomeViewController: UIViewController {
 //        let vc = MemoryViewController.init()
 //        self.navigationController?.pushViewController(vc, animated: true)
         
-        //MARK: 20、可选链
-        let vc = OptionalChainViewController.init()
+        // MARK: 20、可选链
+//        let vc = OptionalChainViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 21、类型转换
+        let vc = TypeCastingViewController.init()
         self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串
