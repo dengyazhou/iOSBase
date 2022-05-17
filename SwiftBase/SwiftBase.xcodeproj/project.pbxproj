@@ -13,6 +13,8 @@
 		930D27812822D5DB0052BCD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930D277F2822D5DB0052BCD0 /* Main.storyboard */; };
 		930D27832822D5DC0052BCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930D27822822D5DC0052BCD0 /* Assets.xcassets */; };
 		930D27862822D5DC0052BCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */; };
+		932E905D28334681006E11EF /* AnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E905C28334681006E11EF /* AnyViewController.swift */; };
+		932E90602833F780006E11EF /* NestedTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E905F2833F780006E11EF /* NestedTypesViewController.swift */; };
 		932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */; };
 		932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F8DCF282961D7003E065E /* EnumViewController.swift */; };
 		935CAFC92831EA590094BFAE /* TypeCastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935CAFC82831EA590094BFAE /* TypeCastingViewController.swift */; };
@@ -38,6 +40,8 @@
 		930D27822822D5DC0052BCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930D27852822D5DC0052BCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		930D27872822D5DC0052BCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		932E905C28334681006E11EF /* AnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyViewController.swift; sourceTree = "<group>"; };
+		932E905F2833F780006E11EF /* NestedTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTypesViewController.swift; sourceTree = "<group>"; };
 		932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructViewController.swift; sourceTree = "<group>"; };
 		932F8DCF282961D7003E065E /* EnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumViewController.swift; sourceTree = "<group>"; };
 		935CAFC82831EA590094BFAE /* TypeCastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCastingViewController.swift; sourceTree = "<group>"; };
@@ -110,12 +114,30 @@
 				93DA427B282E03D000E021A5 /* Memory */,
 				939CEB8F282FF5F8006B8435 /* OptionalChain */,
 				935CAFC72831EA3F0094BFAE /* TypeCasting */,
+				932E905B2833307A006E11EF /* AnyAndAnyObject */,
+				932E905E2833F72C006E11EF /* NestedTypes */,
 				930D277F2822D5DB0052BCD0 /* Main.storyboard */,
 				930D27822822D5DC0052BCD0 /* Assets.xcassets */,
 				930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */,
 				930D27872822D5DC0052BCD0 /* Info.plist */,
 			);
 			path = SwiftBase;
+			sourceTree = "<group>";
+		};
+		932E905B2833307A006E11EF /* AnyAndAnyObject */ = {
+			isa = PBXGroup;
+			children = (
+				932E905C28334681006E11EF /* AnyViewController.swift */,
+			);
+			path = AnyAndAnyObject;
+			sourceTree = "<group>";
+		};
+		932E905E2833F72C006E11EF /* NestedTypes */ = {
+			isa = PBXGroup;
+			children = (
+				932E905F2833F780006E11EF /* NestedTypesViewController.swift */,
+			);
+			path = NestedTypes;
 			sourceTree = "<group>";
 		};
 		932F8DCB28295B72003E065E /* ClassAndStruct */ = {
@@ -339,8 +361,10 @@
 				930D277E2822D5DB0052BCD0 /* ViewController.swift in Sources */,
 				932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */,
 				935CAFC92831EA590094BFAE /* TypeCastingViewController.swift in Sources */,
+				932E905D28334681006E11EF /* AnyViewController.swift in Sources */,
 				932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */,
 				93792B3C2829FF9000B802CB /* ClassAndPropertyViewController.swift in Sources */,
+				932E90602833F780006E11EF /* NestedTypesViewController.swift in Sources */,
 				930D277A2822D5DB0052BCD0 /* AppDelegate.swift in Sources */,
 				930D277C2822D5DB0052BCD0 /* SceneDelegate.swift in Sources */,
 				937EA5052823759200204D29 /* HomeViewController.swift in Sources */,

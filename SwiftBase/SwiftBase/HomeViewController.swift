@@ -58,7 +58,15 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 21、类型转换
-        let vc = TypeCastingViewController.init()
+//        let vc = TypeCastingViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 22、Any and AnyObject
+//        let vc = AnyViewController.init()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 23、嵌套类型
+        let vc = NestedTypesViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串
