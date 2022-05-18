@@ -15,6 +15,8 @@ extern _objc_autoreleasePoolPrint();
 
 @interface InnerManageViewController ()
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @property (nonatomic, strong) InnerSongObject *innerObj;
 
 @property (nonatomic, weak) UIImageView *imageView;
@@ -55,13 +57,18 @@ extern _objc_autoreleasePoolPrint();
 //    NSString *str = @"123";
 //    NSLog(@"%@",str);
     
+#pragma mark OC 退出页面，会等待延迟调用执行完成后，再执行ViewController的dealloc，Swift 一样的效果
+    //加上 __weak typeof(self) vc = self;后，ViewController会先释放，然后nil调用.dataArray 不会崩溃，Swift 一样的效果
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        self.dataArray = [[NSMutableArray alloc] initWithCapacity:0];
+        NSLog(@"来了");
+    });
     
 #pragma mark dealloc 当前类，父类调用顺序
     //先调用子类，然后父类，最后NSObject的子类
-    {
-        InnerSonObject *obj = [[InnerSonObject alloc] init];
-    }
-    
+//    {
+//        InnerSonObject *obj = [[InnerSonObject alloc] init];
+//    }
     
 #pragma mark for 循环，使用 @autoreleasepool {}
     //不使用 @autoreleasepool{},如果是autorelease对象，他们会进入自动释放池，然后会在runloop将要休眠的时候释放，由于现在for循环一直再走，所以runloop不会休眠，这个大量的autorelease临时对象不会释放。

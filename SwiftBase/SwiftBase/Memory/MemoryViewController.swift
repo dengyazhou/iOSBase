@@ -99,7 +99,8 @@ class MemoryHTTPURL {
     //类型为闭包的计算属性
     lazy var url: ()->String = {
         //解决了循环引用的问题
-        [unowned self] in
+        [unowned self] in //同时释放时可以用unowned，如果是异步不同时例如接口请求，self(vc)已经释放了，但是接口返回数据才来，而接口的回调中用到了self，这是就会crash。
+//        [weak self] in //可以解决上面unowned解决不了的问题，但是用weak修饰之后，self就变成了一个可选类型，调用的时候会多加一个?,即是?.
         //可选绑定
         if let path = self.pathString {
             return "http://\(self.hostString)/\(self.pathString!)"
@@ -115,6 +116,7 @@ class MemoryHTTPURL {
 
 
 class MemoryViewController: UIViewController {
+    var dataArray: [String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,11 +149,26 @@ class MemoryViewController: UIViewController {
 //        xiaoLong = nil
         
         //捕获列表
-        var dataUrl = MemoryHTTPURL(hostString: "www.baidu.com", pathString: "shishi.png")
-        let urlFunc = dataUrl?.url
+//        var dataUrl = MemoryHTTPURL(hostString: "www.baidu.com", pathString: "shishi.png")
+//        let urlFunc = dataUrl?.url
+//
+//        let urlString = urlFunc!()
+//        print("urlString:\(urlString)")
         
-        let urlString = urlFunc!()
-        print("urlString:\(urlString)")
+        
+        // MARK: OC 退出页面，会等待延迟调用执行完成后，再执行ViewController的dealloc，Swift 一样的效果
+        // 如果加了 [unowned self] in，会先释放ViewController，然后在调用到self.dataArray，由于self释放了，就会崩溃
+        // 如果加了 [weak self] in, 会先释放ViewController，然后在调用到self?.dataArray，self虽然释放了，但是不会崩溃
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            [weak self] in
+            print("来了")
+//            self.dataArray = []
+            self?.dataArray = []
+        }
+    }
+    
+    deinit {
+        print("MemoryViewController deinit")
     }
 
     

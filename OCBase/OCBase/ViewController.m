@@ -572,8 +572,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 45、内存管理
-//    InnerManageViewController *vc= [[InnerManageViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:true];
+    InnerManageViewController *vc= [[InnerManageViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
     
 #pragma mark 44、__autoreleasing
 //    __autoreleasing NSObject *obj = [[NSObject alloc] init];

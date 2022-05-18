@@ -50,8 +50,8 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 19、内存管理
-//        let vc = MemoryViewController.init()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = MemoryViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 20、可选链
 //        let vc = OptionalChainViewController.init()
@@ -66,8 +66,8 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 23、嵌套类型
-        let vc = NestedTypesViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = NestedTypesViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串
 //        let str = "ABCDEFGHIJKLMN"
