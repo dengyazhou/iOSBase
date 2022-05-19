@@ -54,6 +54,7 @@
 #import "Null/NullViewController.h"
 #import "Notification/NotificationViewController.h"
 #import "Protocol/XMRTCObj.h"
+#import "ExtensionViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -464,6 +465,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    });
     
     
+#pragma mark 62、扩展Extension
+    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 61、判断字符串是否包含指定的字符串
     //containsString 方法区分小写字母(iOS 8.0)
@@ -572,8 +576,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 45、内存管理
-    InnerManageViewController *vc= [[InnerManageViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:true];
+//    InnerManageViewController *vc= [[InnerManageViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:true];
     
 #pragma mark 44、__autoreleasing
 //    __autoreleasing NSObject *obj = [[NSObject alloc] init];

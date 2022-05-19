@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03EFE85E5BFA370F69CFB10D /* Pods_OCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */; };
+		9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2102835D606007AB258 /* ExtensionViewController.m */; };
+		9320C2142835D867007AB258 /* ExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2132835D867007AB258 /* ExtObject.m */; };
 		B69B4877282E4C8B0088740E /* XMFatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BE282E4C8A0088740E /* XMFatherObj.m */; };
 		B69B4878282E4C8B0088740E /* SelfAndSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BF282E4C8A0088740E /* SelfAndSuperVC.m */; };
 		B69B4879282E4C8B0088740E /* XMSonObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47C0282E4C8A0088740E /* XMSonObj.m */; };
@@ -103,6 +105,11 @@
 		7240C12950F701E582F46FBE /* Pods-TestOneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOneTests.debug.xcconfig"; path = "Target Support Files/Pods-TestOneTests/Pods-TestOneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		756586278F7C21BDAE7B72C0 /* Pods-TestOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOne.release.xcconfig"; path = "Target Support Files/Pods-TestOne/Pods-TestOne.release.xcconfig"; sourceTree = "<group>"; };
 		9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9320C20F2835D606007AB258 /* ExtensionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionViewController.h; sourceTree = "<group>"; };
+		9320C2102835D606007AB258 /* ExtensionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionViewController.m; sourceTree = "<group>"; };
+		9320C2122835D867007AB258 /* ExtObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtObject.h; sourceTree = "<group>"; };
+		9320C2132835D867007AB258 /* ExtObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtObject.m; sourceTree = "<group>"; };
+		9320C2152835D88B007AB258 /* ExtObject+XMObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtObject+XMObject.h"; sourceTree = "<group>"; };
 		A466C44274EB7A72A9058611 /* Pods-OCBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBase.release.xcconfig"; path = "Target Support Files/Pods-OCBase/Pods-OCBase.release.xcconfig"; sourceTree = "<group>"; };
 		B65BC953268DA3CC00CFD5F2 /* OCBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69B47B9282E4C8A0088740E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -288,6 +295,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9320C20D2835D3EC007AB258 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9320C20F2835D606007AB258 /* ExtensionViewController.h */,
+				9320C2102835D606007AB258 /* ExtensionViewController.m */,
+				9320C2122835D867007AB258 /* ExtObject.h */,
+				9320C2132835D867007AB258 /* ExtObject.m */,
+				9320C2152835D88B007AB258 /* ExtObject+XMObject.h */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B65BC94A268DA3CC00CFD5F2 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +338,7 @@
 				B69B47D2282E4C8A0088740E /* RootViewController.m */,
 				B69B485E282E4C8B0088740E /* ViewController.h */,
 				B69B4816282E4C8A0088740E /* ViewController.m */,
+				9320C20D2835D3EC007AB258 /* Extension */,
 				B69B47F4282E4C8A0088740E /* Notification */,
 				B69B483D282E4C8B0088740E /* Null */,
 				B69B480B282E4C8A0088740E /* Timer */,
@@ -812,6 +832,7 @@
 				B69B48B2282E4C8B0088740E /* NullViewController.m in Sources */,
 				B69B4880282E4C8B0088740E /* XMLivePlayer.m in Sources */,
 				B69B48BC282E4C8B0088740E /* Car.m in Sources */,
+				9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */,
 				B69B4898282E4C8B0088740E /* TimerViewController.m in Sources */,
 				B69B4895282E4C8B0088740E /* MSObject.m in Sources */,
 				B69B48C6282E4C8B0088740E /* UIHitTestTheoryView.m in Sources */,
@@ -855,6 +876,7 @@
 				B69B489E282E4C8B0088740E /* ViewController.m in Sources */,
 				B69B48C1282E4C8B0088740E /* Person+Ting.m in Sources */,
 				B69B48AD282E4C8B0088740E /* XMCodeingObj.m in Sources */,
+				9320C2142835D867007AB258 /* ExtObject.m in Sources */,
 				B69B489B282E4C8B0088740E /* RunTimeViewController.m in Sources */,
 				B69B488C282E4C8B0088740E /* KVOPerson.m in Sources */,
 				B69B48B6282E4C8B0088740E /* Person+Chat.m in Sources */,

@@ -13,6 +13,7 @@
 		930D27812822D5DB0052BCD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930D277F2822D5DB0052BCD0 /* Main.storyboard */; };
 		930D27832822D5DC0052BCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930D27822822D5DC0052BCD0 /* Assets.xcassets */; };
 		930D27862822D5DC0052BCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */; };
+		9320C2182835E1DC007AB258 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2172835E1DC007AB258 /* ExtensionViewController.swift */; };
 		932E905D28334681006E11EF /* AnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E905C28334681006E11EF /* AnyViewController.swift */; };
 		932E90602833F780006E11EF /* NestedTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E905F2833F780006E11EF /* NestedTypesViewController.swift */; };
 		932F8DCD28295C5C003E065E /* ClassAndStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */; };
@@ -40,6 +41,7 @@
 		930D27822822D5DC0052BCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930D27852822D5DC0052BCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		930D27872822D5DC0052BCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9320C2172835E1DC007AB258 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		932E905C28334681006E11EF /* AnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyViewController.swift; sourceTree = "<group>"; };
 		932E905F2833F780006E11EF /* NestedTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTypesViewController.swift; sourceTree = "<group>"; };
 		932F8DCC28295C5C003E065E /* ClassAndStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructViewController.swift; sourceTree = "<group>"; };
@@ -116,12 +118,21 @@
 				935CAFC72831EA3F0094BFAE /* TypeCasting */,
 				932E905B2833307A006E11EF /* AnyAndAnyObject */,
 				932E905E2833F72C006E11EF /* NestedTypes */,
+				9320C2162835E1B8007AB258 /* Extension */,
 				930D277F2822D5DB0052BCD0 /* Main.storyboard */,
 				930D27822822D5DC0052BCD0 /* Assets.xcassets */,
 				930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */,
 				930D27872822D5DC0052BCD0 /* Info.plist */,
 			);
 			path = SwiftBase;
+			sourceTree = "<group>";
+		};
+		9320C2162835E1B8007AB258 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9320C2172835E1DC007AB258 /* ExtensionViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		932E905B2833307A006E11EF /* AnyAndAnyObject */ = {
@@ -354,6 +365,7 @@
 			files = (
 				93EC1241282B9E5D0085FC51 /* PolymorphicViewController.swift in Sources */,
 				93792B3F282A363A00B802CB /* MethodViewController.swift in Sources */,
+				9320C2182835E1DC007AB258 /* ExtensionViewController.swift in Sources */,
 				937EA50828237EC400204D29 /* ClosuresViewController.swift in Sources */,
 				93792B48282B4F5200B802CB /* InheritViewController.swift in Sources */,
 				939CEB91282FF6AE006B8435 /* OptionalChainViewController.swift in Sources */,
