@@ -774,6 +774,22 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"===>>>:%@",dateNow.description);
 //    NSLog(@"===>>>:%@",date1);
     
+#pragma mark iOS 世界标准时间UTC/GMT 转为当前系统时区对应的时间
+    //默认都是UTC/GMT时间
+//    NSDate *date = [NSDate date];//默认是UTC时间
+//    NSLog(@"===>>>:%@",date.description);
+//    NSTimeZone *timeZoneUTC = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT，UTC打印也是GMT
+//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
+//    NSTimeZone *timeZoneLocal = [NSTimeZone localTimeZone];
+//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
+//    NSInteger timeZoneUTCOffSet = [timeZoneUTC secondsFromGMTForDate:date];
+//    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneUTCOffSet);//timeZoneUTCOffSet:0
+//    NSInteger timeZoneLocalOffSet = [timeZoneLocal secondsFromGMTForDate:date];
+//    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneLocalOffSet);//timeZoneUTCOffSet:28800
+//
+//    NSDate *dateLocal = [[NSDate alloc] initWithTimeInterval:timeZoneLocalOffSet sinceDate:date];//转化成当地时间
+//    NSLog(@"===>>>:%@",dateLocal.description);
+    
 #pragma mark 20、timeIntervalSince1970 时间戳是秒
 //    NSTimeInterval date = [[NSDate date] timeIntervalSince1970]*1000;
 
@@ -781,6 +797,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    xlogDict[@"dataTime1"] = @(date);
 //    xlogDict[@"dataTime2"] = @(floor(date));
 //    NSLog(@"===>>>:%@",xlogDict);
+    
+    
     
 #pragma mark 19、yy_modelToJSONObject
 //    XMLiveStream *str = [[XMLiveStream alloc] init];
