@@ -464,10 +464,15 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+
+#pragma mark 63、stringByReplacingOccurrencesOfString 字符替换
+    NSString *str = [@"1hello23hhhh2" stringByReplacingOccurrencesOfString:@"2" withString:@"D"];
+    NSLog(@"%@",str);
+    
     
 #pragma mark 62、扩展Extension
-    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 61、判断字符串是否包含指定的字符串
     //containsString 方法区分小写字母(iOS 8.0)
