@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, unsafe_unretained) NSString *strUnsafe;
 @property (nonatomic, copy) NSString *strCopy;
 
+@property (nonatomic, class) NSInteger cAge;//类属性 需要自己手动实现set、get方法，不然会崩溃
 
 @end
 

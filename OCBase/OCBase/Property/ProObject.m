@@ -16,6 +16,8 @@
 //    3、使用场景是在分类中添加了属性，.m中需要加@dynamic
 @dynamic name;
 
+//@dynamic cAge;
+
 //@synthesize
 //    注意点：1、如果想同时自己实现set、get方法，需要@synthesize name = _name;然后才能在set、get方法中使用_name。
 //    2、如果只实现一个set或get方法，则不需要@synthesize name = _name; 可以直接在set、get方法中使用_name。

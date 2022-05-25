@@ -600,7 +600,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 #pragma mark 41、property
 //    ProObject *obj = [[ProObject alloc] init];
-//    obj.name = @"嘿嘿";
+////    obj.name = @"嘿嘿";
+//    ProObject.cAge = 100;
+//    NSLog(@"cAge:%ld",ProObject.cAge);
     
 #pragma mark 40、关联对象
 //    AssObject *obj = [[AssObject alloc] init];
@@ -892,10 +894,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",result);
     
 #pragma mark stringByTrimmingCharactersInSet 去掉特殊字符
-    NSCharacterSet *chara = [NSCharacterSet whitespaceCharacterSet];//两端空格
-    NSString *str = @" abc def ";
-    NSString *rstr = [str stringByTrimmingCharactersInSet:chara];//去掉两端空格
-    NSLog(@"--%@--",rstr);
+//    NSCharacterSet *chara = [NSCharacterSet whitespaceCharacterSet];//两端空格
+//    NSString *str = @" abc def ";
+//    NSString *rstr = [str stringByTrimmingCharactersInSet:chara];//去掉两端空格
+//    NSLog(@"--%@--",rstr);
     
 #pragma mark stringByReplacingOccurrencesOfString 字符替换
 //    NSString *str = [@"1hello23hhhh2" stringByReplacingOccurrencesOfString:@"2" withString:@"D"];
