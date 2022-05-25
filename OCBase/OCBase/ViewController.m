@@ -464,12 +464,6 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
-
-#pragma mark 63、stringByReplacingOccurrencesOfString 字符替换
-    NSString *str = [@"1hello23hhhh2" stringByReplacingOccurrencesOfString:@"2" withString:@"D"];
-    NSLog(@"%@",str);
-    
-    
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
@@ -870,6 +864,22 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    systemLayout.size.height;
     
 #pragma mark 15、NSCharacterSet
+//    1 controlCharacterSet//控制符
+//    2 whitespaceCharacterSet //两端空格
+//    3 whitespaceAndNewlineCharacterSet//空格换行
+//    4 decimalDigitCharacterSet//小数
+//    5 letterCharacterSet//文字
+//    6 lowercaseLetterCharacterSet//小写字母
+//    7 uppercaseLetterCharacterSet//大写字母
+//    8 nonBaseCharacterSet//非基础
+//    9 alphanumericCharacterSet//字母数字
+//    10 decomposableCharacterSet//可分解
+//    11 illegalCharacterSet//非法
+//    12 punctuationCharacterSet//标点
+//    13 capitalizedLetterCharacterSet//大写
+//    14 symbolCharacterSet//符号
+//    15 newlineCharacterSet//换行符
+
 //    NSCharacterSet *chara = [NSCharacterSet characterSetWithCharactersInString:@"~^G"];
 //    NSLog(@"%@",chara);
     
@@ -880,6 +890,16 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",array);
 //    NSString *result = [array componentsJoinedByString:@"="];//array元素组成字符串
 //    NSLog(@"%@",result);
+    
+#pragma mark stringByTrimmingCharactersInSet 去掉特殊字符
+    NSCharacterSet *chara = [NSCharacterSet whitespaceCharacterSet];//两端空格
+    NSString *str = @" abc def ";
+    NSString *rstr = [str stringByTrimmingCharactersInSet:chara];//去掉两端空格
+    NSLog(@"--%@--",rstr);
+    
+#pragma mark stringByReplacingOccurrencesOfString 字符替换
+//    NSString *str = [@"1hello23hhhh2" stringByReplacingOccurrencesOfString:@"2" withString:@"D"];
+//    NSLog(@"%@",str);
     
 #pragma mark 13、字节数组转NSData
 //    Byte byte[] = {0x09,0x00,0x00,0x4a,
