@@ -10,7 +10,7 @@
 //##__VA_ARGS__ 代表多参数
 //... 代表多参数
 
-#define XMOCBaseLog(_tag, _path ,_format, ...)     [XMOCBase putWithTag:_tag path:_path Format:_format, ##__VA_ARGS__];
+#define XMTestOneLog(_tag, _path ,_format, ...)     [XMTestOne putWithTag:_tag path:_path Format:_format, ##__VA_ARGS__];
 
 NS_ASSUME_NONNULL_BEGIN
 

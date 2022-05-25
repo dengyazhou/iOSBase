@@ -738,10 +738,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 //    NSString *str = @"a %s b %@ c %@";
 //    NSString *str = @"a";
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:[NSString stringWithFormat:@"12 === %@ === %@",@"34",str]];//错误,如果str中有%@或%s，就会导致format中有%@或%s，里面再调用[[NSString alloc] initWithFormat:format arguments:ap]，就会导致参数匹配不是而崩溃
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12 === %@ === %@",@"34",str];
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12",@"34",@"56"];
-//    XMOCBaseLog(@"XMIMCore", @"liveChat", @"12 === %@ === %@",@"34",str);
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:[NSString stringWithFormat:@"12 === %@ === %@",@"34",str]];//错误,如果str中有%@或%s，就会导致format中有%@或%s，里面再调用[[NSString alloc] initWithFormat:format arguments:ap]，就会导致参数匹配不是而崩溃
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12 === %@ === %@",@"34",str];
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12",@"34",@"56"];
+//    XMTestOneLog(@"XMIMCore", @"liveChat", @"12 === %@ === %@",@"34",str);
 //    NSLog(@"===987===123");
     
 #pragma mark 22、NSPredicate
