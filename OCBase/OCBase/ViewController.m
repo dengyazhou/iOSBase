@@ -464,6 +464,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+#pragma mark 63、UUID
+    //在同一台设备上不同的App的UUID是一样的
+//    NSLog(@"UUIDString:%@",[[UIDevice currentDevice].identifierForVendor UUIDString]);
+    
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
