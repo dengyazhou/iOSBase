@@ -464,9 +464,16 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+#pragma mark 64、NSProcessInfo 进程相关
+//    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+//    processInfo.processName;
+//    processInfo.hostName;
+//    processInfo.environment;
+//    processInfo.systemUptime;
+    
 #pragma mark 63、UUID
-    NSLog(@"UUIDString:%@",[[UIDevice currentDevice].identifierForVendor UUIDString]);//在同一台设备上不同的App的UUID是一样的
-    NSLog(@"UUIDString:%@",[[NSUUID UUID] UUIDString]);//App重启就变了
+//    NSLog(@"UUIDString:%@",[[UIDevice currentDevice].identifierForVendor UUIDString]);//在同一台设备上不同的App的UUID是一样的
+//    NSLog(@"UUIDString:%@",[[NSUUID UUID] UUIDString]);//App重启就变了
     
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
