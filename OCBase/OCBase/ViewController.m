@@ -55,6 +55,7 @@
 #import "Notification/NotificationViewController.h"
 #import "Protocol/XMRTCObj.h"
 #import "ExtensionViewController.h"
+#import "UUID/UUIDViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -471,9 +472,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    processInfo.environment;
 //    processInfo.systemUptime;
     
-#pragma mark 63、UUID
-//    NSLog(@"UUIDString:%@",[[UIDevice currentDevice].identifierForVendor UUIDString]);//在同一台设备上不同的App的UUID是一样的
-//    NSLog(@"UUIDString:%@",[[NSUUID UUID] UUIDString]);//App重启就变了
+#pragma mark 63、identifierForVendor & UUID
+    UUIDViewController *vc = [[UUIDViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
