@@ -28,6 +28,7 @@
 		93DA427D282E03F800E021A5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DA427C282E03F800E021A5 /* MemoryViewController.swift */; };
 		93EC1241282B9E5D0085FC51 /* PolymorphicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1240282B9E5D0085FC51 /* PolymorphicViewController.swift */; };
 		93EC1244282BA8FF0085FC51 /* ConstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1243282BA8FF0085FC51 /* ConstructorViewController.swift */; };
+		B61DDC6728444E7100185546 /* GenericTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61DDC6628444E7100185546 /* GenericTypesViewController.swift */; };
 		B6A72995283B159900C680B7 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A72994283B159900C680B7 /* ProtocolViewController.swift */; };
 		D439BDFE1D84454FD4F5AF37 /* Pods_SwiftBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA37C88A5D45B909FA2C582 /* Pods_SwiftBase.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		93DA427C282E03F800E021A5 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		93EC1240282B9E5D0085FC51 /* PolymorphicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolymorphicViewController.swift; sourceTree = "<group>"; };
 		93EC1243282BA8FF0085FC51 /* ConstructorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorViewController.swift; sourceTree = "<group>"; };
+		B61DDC6628444E7100185546 /* GenericTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTypesViewController.swift; sourceTree = "<group>"; };
 		B6A72994283B159900C680B7 /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		BA92E59D01048641114ABEED /* Pods-SwiftBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBase.release.xcconfig"; path = "Target Support Files/Pods-SwiftBase/Pods-SwiftBase.release.xcconfig"; sourceTree = "<group>"; };
 		EAA37C88A5D45B909FA2C582 /* Pods_SwiftBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				932E905E2833F72C006E11EF /* NestedTypes */,
 				9320C2162835E1B8007AB258 /* Extension */,
 				B6A72993283B157500C680B7 /* Protocol */,
+				B61DDC6528444E5300185546 /* GenericTypes */,
 				930D277F2822D5DB0052BCD0 /* Main.storyboard */,
 				930D27822822D5DC0052BCD0 /* Assets.xcassets */,
 				930D27842822D5DC0052BCD0 /* LaunchScreen.storyboard */,
@@ -249,6 +252,14 @@
 				BA92E59D01048641114ABEED /* Pods-SwiftBase.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B61DDC6528444E5300185546 /* GenericTypes */ = {
+			isa = PBXGroup;
+			children = (
+				B61DDC6628444E7100185546 /* GenericTypesViewController.swift */,
+			);
+			path = GenericTypes;
 			sourceTree = "<group>";
 		};
 		B6A72993283B157500C680B7 /* Protocol */ = {
@@ -382,6 +393,7 @@
 				93792B48282B4F5200B802CB /* InheritViewController.swift in Sources */,
 				939CEB91282FF6AE006B8435 /* OptionalChainViewController.swift in Sources */,
 				93DA427D282E03F800E021A5 /* MemoryViewController.swift in Sources */,
+				B61DDC6728444E7100185546 /* GenericTypesViewController.swift in Sources */,
 				930D277E2822D5DB0052BCD0 /* ViewController.swift in Sources */,
 				932F8DD0282961D7003E065E /* EnumViewController.swift in Sources */,
 				935CAFC92831EA590094BFAE /* TypeCastingViewController.swift in Sources */,
