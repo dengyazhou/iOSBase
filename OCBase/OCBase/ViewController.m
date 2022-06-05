@@ -466,8 +466,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
     
 #pragma mark 62、扩展Extension
-    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 61、判断字符串是否包含指定的字符串
     //containsString 方法区分小写字母(iOS 8.0)
@@ -763,9 +763,15 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"player:%@",player.description);
 //    }
     
-#pragma mark 21、description
-//    NSString *str = [NSDate date].description;
-//    NSLog(@"===>>>:%@",str);
+#pragma mark 21、description 和 NSDateFormatter
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+//    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@""];
+    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+    NSLog(@"===>>>:%@",dateStr);
+    
+    NSString *str = [NSDate date].description;
+    NSLog(@"===>>>:%@",str);
 //    NSDate *date = [NSDate date];
 //    NSDate *dateNow = [NSDate now];
 //    NSDate *date1 = [NSDate dateWithTimeIntervalSince1970:0];
