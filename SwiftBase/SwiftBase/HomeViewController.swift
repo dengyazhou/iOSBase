@@ -70,7 +70,15 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 24、扩展
-        let vc = ExtensionViewController()
+//        let vc = ExtensionViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 25、协议
+//        let vc = ProtocolViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        // MARK: 26、泛型
+        let vc = GenericTypesViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串

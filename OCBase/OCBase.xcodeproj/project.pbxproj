@@ -10,6 +10,7 @@
 		03EFE85E5BFA370F69CFB10D /* Pods_OCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */; };
 		9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2102835D606007AB258 /* ExtensionViewController.m */; };
 		9320C2142835D867007AB258 /* ExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2132835D867007AB258 /* ExtObject.m */; };
+		B6756EB32841ECAE00CAF38C /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EB22841ECAE00CAF38C /* UUIDViewController.m */; };
 		B69B4877282E4C8B0088740E /* XMFatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BE282E4C8A0088740E /* XMFatherObj.m */; };
 		B69B4878282E4C8B0088740E /* SelfAndSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BF282E4C8A0088740E /* SelfAndSuperVC.m */; };
 		B69B4879282E4C8B0088740E /* XMSonObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47C0282E4C8A0088740E /* XMSonObj.m */; };
@@ -112,6 +113,8 @@
 		9320C2152835D88B007AB258 /* ExtObject+XMObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtObject+XMObject.h"; sourceTree = "<group>"; };
 		A466C44274EB7A72A9058611 /* Pods-OCBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBase.release.xcconfig"; path = "Target Support Files/Pods-OCBase/Pods-OCBase.release.xcconfig"; sourceTree = "<group>"; };
 		B65BC953268DA3CC00CFD5F2 /* OCBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6756EB12841ECAE00CAF38C /* UUIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
+		B6756EB22841ECAE00CAF38C /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
 		B69B47B9282E4C8A0088740E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B69B47BB282E4C8A0088740E /* XMFatherObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFatherObj.h; sourceTree = "<group>"; };
 		B69B47BC282E4C8A0088740E /* XMSonObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMSonObj.h; sourceTree = "<group>"; };
@@ -325,6 +328,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B6756EB42841ECB500CAF38C /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				B6756EB12841ECAE00CAF38C /* UUIDViewController.h */,
+				B6756EB22841ECAE00CAF38C /* UUIDViewController.m */,
+			);
+			path = UUID;
+			sourceTree = "<group>";
+		};
 		B69B47B8282E4C8A0088740E /* OCBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +350,7 @@
 				B69B47D2282E4C8A0088740E /* RootViewController.m */,
 				B69B485E282E4C8B0088740E /* ViewController.h */,
 				B69B4816282E4C8A0088740E /* ViewController.m */,
+				B6756EB42841ECB500CAF38C /* UUID */,
 				9320C20D2835D3EC007AB258 /* Extension */,
 				B69B47F4282E4C8A0088740E /* Notification */,
 				B69B483D282E4C8B0088740E /* Null */,
@@ -889,6 +902,7 @@
 				B69B48AE282E4C8B0088740E /* UserDefaultsViewController.m in Sources */,
 				B69B487C282E4C8B0088740E /* RrawRectViewController.m in Sources */,
 				B69B48CA282E4C8B0088740E /* UIHitTestView21.m in Sources */,
+				B6756EB32841ECAE00CAF38C /* UUIDViewController.m in Sources */,
 				B69B48B8282E4C8B0088740E /* AssObject+Cate.m in Sources */,
 				B69B489C282E4C8B0088740E /* IMEObject.m in Sources */,
 				B69B48C7282E4C8B0088740E /* UIHitTestViewSuper.m in Sources */,
@@ -1060,7 +1074,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xmly.OCBase;
+				PRODUCT_BUNDLE_IDENTIFIER = xmly.OCBase1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1084,7 +1098,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xmly.OCBase;
+				PRODUCT_BUNDLE_IDENTIFIER = xmly.OCBase1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

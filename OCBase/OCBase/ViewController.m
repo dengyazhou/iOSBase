@@ -55,6 +55,7 @@
 #import "Notification/NotificationViewController.h"
 #import "Protocol/XMRTCObj.h"
 #import "ExtensionViewController.h"
+#import "UUID/UUIDViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -464,6 +465,17 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+#pragma mark 64、NSProcessInfo 进程相关
+//    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+//    processInfo.processName;
+//    processInfo.hostName;
+//    processInfo.environment;
+//    processInfo.systemUptime;
+    
+
+#pragma mark 62、扩展Extension
+//    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
@@ -601,7 +613,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 #pragma mark 41、property
 //    ProObject *obj = [[ProObject alloc] init];
-//    obj.name = @"嘿嘿";
+////    obj.name = @"嘿嘿";
+//    ProObject.cAge = 100;
+//    NSLog(@"cAge:%ld",ProObject.cAge);
     
 #pragma mark 40、关联对象
 //    AssObject *obj = [[AssObject alloc] init];
@@ -737,10 +751,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 //    NSString *str = @"a %s b %@ c %@";
 //    NSString *str = @"a";
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:[NSString stringWithFormat:@"12 === %@ === %@",@"34",str]];//错误,如果str中有%@或%s，就会导致format中有%@或%s，里面再调用[[NSString alloc] initWithFormat:format arguments:ap]，就会导致参数匹配不是而崩溃
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12 === %@ === %@",@"34",str];
-//    [XMOCBase putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12",@"34",@"56"];
-//    XMOCBaseLog(@"XMIMCore", @"liveChat", @"12 === %@ === %@",@"34",str);
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:[NSString stringWithFormat:@"12 === %@ === %@",@"34",str]];//错误,如果str中有%@或%s，就会导致format中有%@或%s，里面再调用[[NSString alloc] initWithFormat:format arguments:ap]，就会导致参数匹配不是而崩溃
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12 === %@ === %@",@"34",str];
+//    [XMTestOne putWithTag:@"XMIMCore" path:@"liveChat" Format:@"12",@"34",@"56"];
+//    XMTestOneLog(@"XMIMCore", @"liveChat", @"12 === %@ === %@",@"34",str);
 //    NSLog(@"===987===123");
     
 #pragma mark 22、NSPredicate
@@ -779,6 +793,22 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"===>>>:%@",dateNow.description);
 //    NSLog(@"===>>>:%@",date1);
     
+#pragma mark iOS 世界标准时间UTC/GMT 转为当前系统时区对应的时间
+    //默认都是UTC/GMT时间
+//    NSDate *date = [NSDate date];//默认是UTC时间
+//    NSLog(@"===>>>:%@",date.description);
+//    NSTimeZone *timeZoneUTC = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT，UTC打印也是GMT
+//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
+//    NSTimeZone *timeZoneLocal = [NSTimeZone localTimeZone];
+//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
+//    NSInteger timeZoneUTCOffSet = [timeZoneUTC secondsFromGMTForDate:date];
+//    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneUTCOffSet);//timeZoneUTCOffSet:0
+//    NSInteger timeZoneLocalOffSet = [timeZoneLocal secondsFromGMTForDate:date];
+//    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneLocalOffSet);//timeZoneUTCOffSet:28800
+//
+//    NSDate *dateLocal = [[NSDate alloc] initWithTimeInterval:timeZoneLocalOffSet sinceDate:date];//转化成当地时间
+//    NSLog(@"===>>>:%@",dateLocal.description);
+    
 #pragma mark 20、timeIntervalSince1970 时间戳是秒
 //    NSTimeInterval date = [[NSDate date] timeIntervalSince1970]*1000;
 
@@ -786,6 +816,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    xlogDict[@"dataTime1"] = @(date);
 //    xlogDict[@"dataTime2"] = @(floor(date));
 //    NSLog(@"===>>>:%@",xlogDict);
+    
+    
     
 #pragma mark 19、yy_modelToJSONObject
 //    XMLiveStream *str = [[XMLiveStream alloc] init];
@@ -871,6 +903,22 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    systemLayout.size.height;
     
 #pragma mark 15、NSCharacterSet
+//    1 controlCharacterSet//控制符
+//    2 whitespaceCharacterSet //两端空格
+//    3 whitespaceAndNewlineCharacterSet//空格换行
+//    4 decimalDigitCharacterSet//小数
+//    5 letterCharacterSet//文字
+//    6 lowercaseLetterCharacterSet//小写字母
+//    7 uppercaseLetterCharacterSet//大写字母
+//    8 nonBaseCharacterSet//非基础
+//    9 alphanumericCharacterSet//字母数字
+//    10 decomposableCharacterSet//可分解
+//    11 illegalCharacterSet//非法
+//    12 punctuationCharacterSet//标点
+//    13 capitalizedLetterCharacterSet//大写
+//    14 symbolCharacterSet//符号
+//    15 newlineCharacterSet//换行符
+
 //    NSCharacterSet *chara = [NSCharacterSet characterSetWithCharactersInString:@"~^G"];
 //    NSLog(@"%@",chara);
     
@@ -881,6 +929,16 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",array);
 //    NSString *result = [array componentsJoinedByString:@"="];//array元素组成字符串
 //    NSLog(@"%@",result);
+    
+#pragma mark stringByTrimmingCharactersInSet 去掉特殊字符
+//    NSCharacterSet *chara = [NSCharacterSet whitespaceCharacterSet];//两端空格
+//    NSString *str = @" abc def ";
+//    NSString *rstr = [str stringByTrimmingCharactersInSet:chara];//去掉两端空格
+//    NSLog(@"--%@--",rstr);
+    
+#pragma mark stringByReplacingOccurrencesOfString 字符替换
+//    NSString *str = [@"1hello23hhhh2" stringByReplacingOccurrencesOfString:@"2" withString:@"D"];
+//    NSLog(@"%@",str);
     
 #pragma mark 13、字节数组转NSData
 //    Byte byte[] = {0x09,0x00,0x00,0x4a,
