@@ -31,7 +31,7 @@ DEPENDENCIES:
   - YYText
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CocoaAsyncSocket
     - CTMediator
@@ -49,6 +49,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: eec4e22b85b0d25b83376cf8823059f3afde0aee
+PODFILE CHECKSUM: 27013d4ca40601ff83fb767368a760a0acad474a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
