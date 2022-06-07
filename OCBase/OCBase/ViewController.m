@@ -465,6 +465,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+#pragma mark 65、测试一下数数的新电脑Temp
+    
 #pragma mark 64、NSProcessInfo 进程相关
 //    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
 //    processInfo.processName;
