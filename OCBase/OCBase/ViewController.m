@@ -786,10 +786,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 ////    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 ////    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
 ////    NSLog(@"===>>>:%@",dateStr);
-//    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 10:06:44 +0000
+//    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 09:30:12 +0000
 ////    NSDate *date = [NSDate date];//默认是UTC时间
 //    NSLog(@"===>>>:%@",date.description);
-//    NSString *dateStr = [formatter stringFromDate:date];
+//    NSString *dateStr = [formatter stringFromDate:date];//把date转化成formatter.timeZone对应的时间，由于formatter.timeZone默认值为localTimeZone本地时间，所以转为本地时间
 //    NSLog(@"===>>>:%@",dateStr);
 
 //    NSString *str = [NSDate date].description;
