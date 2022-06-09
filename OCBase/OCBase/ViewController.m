@@ -780,14 +780,20 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    }
     
 #pragma mark 21、description 和 NSDateFormatter
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-//    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@""];
-    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
-    NSLog(@"===>>>:%@",dateStr);
-    
-    NSString *str = [NSDate date].description;
-    NSLog(@"===>>>:%@",str);
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+////    formatter.timeZone = [NSTimeZone localTimeZone];//默认为localTimeZone
+////    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+////    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+////    NSLog(@"===>>>:%@",dateStr);
+//    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 10:06:44 +0000
+////    NSDate *date = [NSDate date];//默认是UTC时间
+//    NSLog(@"===>>>:%@",date.description);
+//    NSString *dateStr = [formatter stringFromDate:date];
+//    NSLog(@"===>>>:%@",dateStr);
+
+//    NSString *str = [NSDate date].description;
+//    NSLog(@"===>>>:%@",str);
 //    NSDate *date = [NSDate date];
 //    NSDate *dateNow = [NSDate now];
 //    NSDate *date1 = [NSDate dateWithTimeIntervalSince1970:0];
