@@ -10,6 +10,7 @@
 		03EFE85E5BFA370F69CFB10D /* Pods_OCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */; };
 		9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2102835D606007AB258 /* ExtensionViewController.m */; };
 		9320C2142835D867007AB258 /* ExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2132835D867007AB258 /* ExtObject.m */; };
+		B60E0C66285311C900E0D5D8 /* MTThinkingAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E0C65285311C900E0D5D8 /* MTThinkingAnalyticsSDK.m */; };
 		B6756EB32841ECAE00CAF38C /* UUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EB22841ECAE00CAF38C /* UUIDViewController.m */; };
 		B69B4877282E4C8B0088740E /* XMFatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BE282E4C8A0088740E /* XMFatherObj.m */; };
 		B69B4878282E4C8B0088740E /* SelfAndSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B47BF282E4C8A0088740E /* SelfAndSuperVC.m */; };
@@ -112,6 +113,8 @@
 		9320C2132835D867007AB258 /* ExtObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtObject.m; sourceTree = "<group>"; };
 		9320C2152835D88B007AB258 /* ExtObject+XMObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtObject+XMObject.h"; sourceTree = "<group>"; };
 		A466C44274EB7A72A9058611 /* Pods-OCBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBase.release.xcconfig"; path = "Target Support Files/Pods-OCBase/Pods-OCBase.release.xcconfig"; sourceTree = "<group>"; };
+		B60E0C64285311C900E0D5D8 /* MTThinkingAnalyticsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTThinkingAnalyticsSDK.h; sourceTree = "<group>"; };
+		B60E0C65285311C900E0D5D8 /* MTThinkingAnalyticsSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTThinkingAnalyticsSDK.m; sourceTree = "<group>"; };
 		B65BC953268DA3CC00CFD5F2 /* OCBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6756EB12841ECAE00CAF38C /* UUIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUIDViewController.h; sourceTree = "<group>"; };
 		B6756EB22841ECAE00CAF38C /* UUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDViewController.m; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 			children = (
 				B69B47FF282E4C8A0088740E /* MultiThreadingVC.h */,
 				B69B47FE282E4C8A0088740E /* MultiThreadingVC.m */,
+				B60E0C64285311C900E0D5D8 /* MTThinkingAnalyticsSDK.h */,
+				B60E0C65285311C900E0D5D8 /* MTThinkingAnalyticsSDK.m */,
 			);
 			path = MultiThreading;
 			sourceTree = "<group>";
@@ -910,6 +915,7 @@
 				B69B48BF282E4C8B0088740E /* MethodSwizzlingVC.m in Sources */,
 				B69B489D282E4C8B0088740E /* XMMicCancelableQueue.m in Sources */,
 				B69B48BE282E4C8B0088740E /* MethSwiObjSon.m in Sources */,
+				B60E0C66285311C900E0D5D8 /* MTThinkingAnalyticsSDK.m in Sources */,
 				B69B488E282E4C8B0088740E /* ProObject.m in Sources */,
 				B69B4887282E4C8B0088740E /* MVPViewController.m in Sources */,
 				B69B48A3282E4C8B0088740E /* InnerSonObject.m in Sources */,

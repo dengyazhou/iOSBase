@@ -597,8 +597,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    __autoreleasing NSObject *obj = [[NSObject alloc] init];
     
 #pragma mark 43、多线程
-//    MultiThreadingVC *vc = [[MultiThreadingVC alloc] init];
-//    [self.navigationController pushViewController:vc animated:true];
+    MultiThreadingVC *vc = [[MultiThreadingVC alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
     
 #pragma mark 42、如何高性能的画一个圆角?
 //    UILabel *label = [[UILabel alloc] init];

@@ -6,6 +6,7 @@
 //
 
 #import "MultiThreadingVC.h"
+#import "MTThinkingAnalyticsSDK.h"
 
 @interface MultiThreadingVC ()
 
@@ -34,6 +35,16 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"多线程>>>>>>点击开始");
+    
+#pragma mark 11、dispatch_once 默认是带锁的，线程安全
+    dispatch_queue_t queue = dispatch_queue_create("队列once", DISPATCH_QUEUE_CONCURRENT);
+    for (int i = 0; i < 50; i++) {
+        dispatch_async(queue, ^{
+//            NSLog(@"%@",[NSThread currentThread]);
+            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK];
+//            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK1];
+        });
+    }
     
 #pragma mark 10、栅栏函数
     /**
