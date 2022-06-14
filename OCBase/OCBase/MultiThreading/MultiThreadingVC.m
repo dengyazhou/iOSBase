@@ -36,15 +36,34 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"多线程>>>>>>点击开始");
     
+#pragma mark 13、dispatch_once 里面相同的名字
+//    MTThinkingAnalyticsSDK *instance3 = [MTThinkingAnalyticsSDK shareSDK3];
+//    MTThinkingAnalyticsSDK *instance4 = [MTThinkingAnalyticsSDK shareSDK4];
+    
+#pragma mark 12、dispatch_once 创建的对象的地址
+//    MTThinkingAnalyticsSDK *instance1 = [MTThinkingAnalyticsSDK shareSDK2];
+//    NSLog(@"%p %p",instance1, &instance1);
+//
+//    MTThinkingAnalyticsSDK *instance2 = [MTThinkingAnalyticsSDK shareSDK2];
+//    NSLog(@"%p %p",instance2, &instance2);
+//
+//    MTThinkingAnalyticsSDK *instance3 = [MTThinkingAnalyticsSDK shareSDK2];
+//    NSLog(@"%p %p",instance3, &instance3);
+    /*
+     *2022-06-10 14:20:19.871170+0800 OCBase[77484:1359591] 0x600001c60420 0x7ff7b0dbe728
+     *2022-06-10 14:20:37.420955+0800 OCBase[77484:1359591] 0x600001c60420 0x7ff7b0dbe720
+     *2022-06-10 14:20:45.369885+0800 OCBase[77484:1359591] 0x600001c60420 0x7ff7b0dbe718
+     */
+    
 #pragma mark 11、dispatch_once 默认是带锁的，线程安全
-    dispatch_queue_t queue = dispatch_queue_create("队列once", DISPATCH_QUEUE_CONCURRENT);
-    for (int i = 0; i < 50; i++) {
-        dispatch_async(queue, ^{
-//            NSLog(@"%@",[NSThread currentThread]);
-            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK];
-//            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK1];
-        });
-    }
+//    dispatch_queue_t queue = dispatch_queue_create("队列once", DISPATCH_QUEUE_CONCURRENT);
+//    for (int i = 0; i < 50; i++) {
+//        dispatch_async(queue, ^{
+////            NSLog(@"%@",[NSThread currentThread]);
+//            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK];
+////            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK1];
+//        });
+//    }
     
 #pragma mark 10、栅栏函数
     /**

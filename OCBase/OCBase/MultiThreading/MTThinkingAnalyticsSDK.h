@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareSDK1;
 
++ (instancetype)shareSDK2;
+
++ (instancetype)shareSDK3;
+
++ (instancetype)shareSDK4;
+
 @end
 
 NS_ASSUME_NONNULL_END

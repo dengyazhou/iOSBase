@@ -451,6 +451,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"开始");
     
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    NSLog(@"=====>>>>width:%@",@(size.width));
+    
         
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //        NSLog(@"结束啦");
@@ -597,8 +600,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    __autoreleasing NSObject *obj = [[NSObject alloc] init];
     
 #pragma mark 43、多线程
-    MultiThreadingVC *vc = [[MultiThreadingVC alloc] init];
-    [self.navigationController pushViewController:vc animated:true];
+//    MultiThreadingVC *vc = [[MultiThreadingVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:true];
     
 #pragma mark 42、如何高性能的画一个圆角?
 //    UILabel *label = [[UILabel alloc] init];
@@ -779,17 +782,63 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"player:%@",player.description);
 //    }
     
-#pragma mark 21、description 和 NSDateFormatter
+#pragma mark 21、description
+    //NSLog(@"===>>>:%@",date);//打印的是 当前UTC时间所对应的本地时间，更改时区 这个值会变
+    //NSLog(@"===>>>:%@",date.description);//打印的是 UTC时间，更改时区 这个值不变
+    
+#pragma mark 21、时区
+    // 获取所有已知的时区名称
+//    NSArray *zoneNames = [NSTimeZone knownTimeZoneNames];
+//    [zoneNames enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        NSLog(@"===>>>:%ld ==:%@",idx,obj);
+//    }];
+    
+    //localTimeZone、defaultTimeZone、systemTimeZone 都是手机系统设置的时区，三者值相等
+//    NSTimeZone *localTimeZone = [NSTimeZone localTimeZone];// 获取本地时区
+//    NSTimeZone *defaultTimeZone = [NSTimeZone defaultTimeZone];// 获取默认时区
+//    NSTimeZone *systemTimeZone = [NSTimeZone systemTimeZone];// 获取系统时区
+//    NSLog(@"name:%@ data:%@",localTimeZone.name,localTimeZone.data);
+//    NSLog(@"name:%@ data:%@",defaultTimeZone.name,defaultTimeZone.data);
+//    NSLog(@"name:%@ data:%@",systemTimeZone.name,systemTimeZone.data);
+    
+#pragma mark 21、UTC/GMT 0 (零时区)
+//    NSDate *date = [NSDate date];//默认是UTC(零时区)时间，手机系统时间改了，这个也跟着变，但是还是UTC(零时区)时间
+//    NSLog(@"===>>>:%@",date);//打印的是 手机系统设置时区的 时间，更改时区 这个值会变
+//    NSLog(@"===>>>:%@",date.description);//打印的是 UTC时间，更改时区 这个值不变，但是更改手机系统时间，这个就变了
+    
+#pragma mark 21、NSDateFormatter
+    // 实例1
+//    NSDate *date = [NSDate date];
+//    NSLog(@"===>>>:%@",date);
+//    NSLog(@"===>>>:%@",date.description);
+//
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-////    formatter.timeZone = [NSTimeZone localTimeZone];//默认为localTimeZone
+////    formatter.timeZone = [NSTimeZone systemTimeZone];
+////    formatter.timeZone = [NSTimeZone localTimeZone];
+////    formatter.timeZone = [NSTimeZone defaultTimeZone];
 ////    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-////    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
-////    NSLog(@"===>>>:%@",dateStr);
-//    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 09:30:12 +0000
-////    NSDate *date = [NSDate date];//默认是UTC时间
-//    NSLog(@"===>>>:%@",date.description);
-//    NSString *dateStr = [formatter stringFromDate:date];//把date转化成formatter.timeZone对应的时间，由于formatter.timeZone默认值为localTimeZone本地时间，所以转为本地时间
+//    formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//America/Chicago、Asia/Shanghai
+//    NSString *dateStr = [formatter stringFromDate:date];//把date 转化为formatter中对应时区所在 时间的字符串
+//    NSLog(@"===>>>:%@",dateStr);
+    
+    // 实例2
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+//    formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+//    //10:55 == >> 02:55
+////    NSDate *date = [formatter dateFromString:@"2022-06-14 11:32:00"];//会把输入的字符串 2022-06-14 11:32:00 改成 formatter中时区所对应的时间
+//    NSDate *date = [formatter dateFromString:@"2022-06-14 11:40:00"];
+//    NSLog(@"===>>>:%@",date);//打印的是 手机系统设置时区的 时间
+//    NSLog(@"===>>>:%@",date.description);//打印的是 UTC时间
+//
+//    NSDateFormatter *formatter1 = [[NSDateFormatter alloc] init];
+//    formatter1.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+////    formatter1.timeZone = [NSTimeZone localTimeZone];
+////    formatter1.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+////    formatter1.timeZone = [NSTimeZone timeZoneWithName:@"Europe/Moscow"];
+////    formatter1.timeZone = [NSTimeZone defaultTimeZone];
+//    NSString *dateStr = [formatter1 stringFromDate:date];//把date 转化为formatter中对应时区所在 时间的字符串
 //    NSLog(@"===>>>:%@",dateStr);
 
 //    NSString *str = [NSDate date].description;
@@ -801,23 +850,27 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"===>>>:%@",dateNow.description);
 //    NSLog(@"===>>>:%@",date1);
     
-#pragma mark iOS 世界标准时间UTC/GMT 转为当前系统时区对应的时间
+#pragma mark iOS 世界标准时间UTC/GMT
     //默认都是UTC/GMT时间
-//    NSDate *date = [NSDate date];//默认是UTC时间
-//    NSLog(@"===>>>:%@",date.description);
+//    NSDate *date = [NSDate date];
+//    NSLog(@"===>>>date:%@",date);
+//    NSLog(@"===>>>description:%@",date.description);
 //    NSTimeZone *timeZoneUTC = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT，UTC打印也是GMT
-//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
+////    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
+//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC);
 //    NSTimeZone *timeZoneLocal = [NSTimeZone localTimeZone];
-//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
+////    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
+//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal);
 //    NSInteger timeZoneUTCOffSet = [timeZoneUTC secondsFromGMTForDate:date];
 //    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneUTCOffSet);//timeZoneUTCOffSet:0
 //    NSInteger timeZoneLocalOffSet = [timeZoneLocal secondsFromGMTForDate:date];
 //    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneLocalOffSet);//timeZoneUTCOffSet:28800
 //
-//    NSDate *dateLocal = [[NSDate alloc] initWithTimeInterval:timeZoneLocalOffSet sinceDate:date];//转化成当地时间
+//    NSDate *dateLocal = [[NSDate alloc] initWithTimeInterval:timeZoneLocalOffSet sinceDate:date];
+//    NSLog(@"===>>>:%@",dateLocal);
 //    NSLog(@"===>>>:%@",dateLocal.description);
     
-#pragma mark 20、timeIntervalSince1970 时间戳是秒
+#pragma mark 20、timeIntervalSince1970 时间戳是秒  timeIntervalSinceNow
 //    NSTimeInterval date = [[NSDate date] timeIntervalSince1970]*1000;
 
 //    NSMutableDictionary *xlogDict = [NSMutableDictionary dictionary];
@@ -825,8 +878,21 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    xlogDict[@"dataTime2"] = @(floor(date));
 //    NSLog(@"===>>>:%@",xlogDict);
     
+//    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
+//    NSTimeInterval timeInterval1 = [date timeIntervalSince1970];//相对于1970的时间戳
+//    NSTimeInterval timeInterval2 = [date timeIntervalSinceNow];//相对于现在的时间戳
+//    NSLog(@"===>>>:%f",timeInterval1);
+//    NSLog(@"===>>>:%f",timeInterval2);
     
-    
+#pragma mark 20、dateWithTimeIntervalSinceNow: 当前时间往后几秒的时间
+//    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];//当前时间往后几秒的时间
+//    NSLog(@"===>>>:%@",date);
+//    NSLog(@"====>>>>:%@",date.description);
+//    NSDate *dateNow = [NSDate date];
+//    NSLog(@"===>>>:%@",dateNow);
+//    NSLog(@"====>>>>:%@",dateNow.description);
+   
+
 #pragma mark 19、yy_modelToJSONObject
 //    XMLiveStream *str = [[XMLiveStream alloc] init];
 //    str.userID = @"0001";

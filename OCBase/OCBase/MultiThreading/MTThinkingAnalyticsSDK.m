@@ -49,4 +49,30 @@ static MTThinkingAnalyticsSDK *instance;
     }
 }
 
++ (instancetype)shareSDK2 {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[MTThinkingAnalyticsSDK alloc] init];
+    });
+    return instance;
+}
+
++ (instancetype)shareSDK3 {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[MTThinkingAnalyticsSDK alloc] init];
+        NSLog(@"====>>>>>shareSDK3");
+    });
+    return instance;
+}
+
++ (instancetype)shareSDK4 {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[MTThinkingAnalyticsSDK alloc] init];
+        NSLog(@"====>>>>>shareSDK4");
+    });
+    return instance;
+}
+
 @end
