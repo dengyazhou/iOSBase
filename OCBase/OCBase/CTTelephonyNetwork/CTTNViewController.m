@@ -34,6 +34,7 @@
 //    if (@available(iOS 12.0, *)){
 //        NSDictionary *dic = info.serviceSubscriberCellularProviders;
 //    }
+    
     if (@available(iOS 12.0, *)){
         
     }

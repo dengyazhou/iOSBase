@@ -99,6 +99,7 @@
 		B69B48CC282E4C8B0088740E /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69B4873282E4C8B0088740E /* BlockViewController.m */; };
 		B69B48CD282E4C8B0088740E /* xml-admin@3x.webp in Resources */ = {isa = PBXBuildFile; fileRef = B69B4876282E4C8B0088740E /* xml-admin@3x.webp */; };
 		B6DCF6B228588A21005C49C1 /* CTTNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DCF6B128588A21005C49C1 /* CTTNViewController.m */; };
+		B6DCF6B62858AFA7005C49C1 /* PragmaClangVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DCF6B52858AFA7005C49C1 /* PragmaClangVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -286,6 +287,8 @@
 		B69B4876282E4C8B0088740E /* xml-admin@3x.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xml-admin@3x.webp"; sourceTree = "<group>"; };
 		B6DCF6B028588A21005C49C1 /* CTTNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTNViewController.h; sourceTree = "<group>"; };
 		B6DCF6B128588A21005C49C1 /* CTTNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTTNViewController.m; sourceTree = "<group>"; };
+		B6DCF6B42858AFA7005C49C1 /* PragmaClangVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PragmaClangVC.h; sourceTree = "<group>"; };
+		B6DCF6B52858AFA7005C49C1 /* PragmaClangVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PragmaClangVC.m; sourceTree = "<group>"; };
 		BB612F981CDF6BC2D990BA48 /* Pods-OCBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCBase.debug.xcconfig"; path = "Target Support Files/Pods-OCBase/Pods-OCBase.debug.xcconfig"; sourceTree = "<group>"; };
 		BF79D01292129A3474C99D73 /* Pods_TestOne_TestOneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestOne_TestOneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB19A5436D354236C28D065 /* Pods-TestOne-TestOneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOne-TestOneUITests.release.xcconfig"; path = "Target Support Files/Pods-TestOne-TestOneUITests/Pods-TestOne-TestOneUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -356,6 +359,7 @@
 				B69B47D2282E4C8A0088740E /* RootViewController.m */,
 				B69B485E282E4C8B0088740E /* ViewController.h */,
 				B69B4816282E4C8A0088740E /* ViewController.m */,
+				B6DCF6B32858AF7C005C49C1 /* PragmaClang */,
 				B6DCF6AF285889EA005C49C1 /* CTTelephonyNetwork */,
 				B6756EB42841ECB500CAF38C /* UUID */,
 				9320C20D2835D3EC007AB258 /* Extension */,
@@ -713,6 +717,15 @@
 			path = CTTelephonyNetwork;
 			sourceTree = "<group>";
 		};
+		B6DCF6B32858AF7C005C49C1 /* PragmaClang */ = {
+			isa = PBXGroup;
+			children = (
+				B6DCF6B42858AFA7005C49C1 /* PragmaClangVC.h */,
+				B6DCF6B52858AFA7005C49C1 /* PragmaClangVC.m */,
+			);
+			path = PragmaClang;
+			sourceTree = "<group>";
+		};
 		BF234767DA289FA5E8F47E19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +902,7 @@
 				B69B487F282E4C8B0088740E /* XMView.m in Sources */,
 				B69B48B1282E4C8B0088740E /* Person.m in Sources */,
 				B69B4893282E4C8B0088740E /* MultiThreadingVC.m in Sources */,
+				B6DCF6B62858AFA7005C49C1 /* PragmaClangVC.m in Sources */,
 				B69B4897282E4C8B0088740E /* XMCopySong.m in Sources */,
 				B69B487A282E4C8B0088740E /* TableViewController.m in Sources */,
 				B69B4896282E4C8B0088740E /* NSObject+XMMessageSend.m in Sources */,

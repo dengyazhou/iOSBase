@@ -57,6 +57,7 @@
 #import "ExtensionViewController.h"
 #import "UUID/UUIDViewController.h"
 #import "CTTelephonyNetwork/CTTNViewController.h"
+#import "PragmaClang/PragmaClangVC.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -480,21 +481,23 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
 
+#pragma mark 70、#pragma clang diagnostic
+    PragmaClangVC *vc = [[PragmaClangVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 69、 __IPHONE_12_0
-    
-#ifdef __IPHONE_12_0
-   
-#endif
+//#ifdef __IPHONE_12_0
+//
+//#endif
     
 #pragma mark 68、 @available 多少到多少可用
 //    if (@available(iOS 12.0, *)){
 //
 //    }
     
-#pragma mark 67、
-    CTTNViewController *vc = [[CTTNViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+#pragma mark 67、运营商
+//    CTTNViewController *vc = [[CTTNViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 66、applicationState
 //    UIApplicationState state = [UIApplication sharedApplication].applicationState;
@@ -825,6 +828,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     //NSLog(@"===>>>:%@",date.description);//打印的是 UTC时间，更改时区 这个值不变
     
 #pragma mark 21、时区
+    //[https://blog.csdn.net/u013712343/article/details/118695718]
     // 获取所有已知的时区名称
 //    NSArray *zoneNames = [NSTimeZone knownTimeZoneNames];
 //    [zoneNames enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
