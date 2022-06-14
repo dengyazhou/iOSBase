@@ -62,6 +62,11 @@ int globalA = 20;
 //    };
 //    NSLog(@"%@",self->blockObj);//<__NSMallocBlock__: 0x60000364e490>
     
+#pragma mark block 基本格式
+//    NSString *(^block)(int) = ^(int a) {
+//
+//        return @"123";
+//    };
     
 #pragma mark block 修改全局变量的值
 //    int a = 10;
