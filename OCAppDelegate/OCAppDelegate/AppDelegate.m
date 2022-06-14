@@ -26,14 +26,6 @@
     return YES;
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    NSLog(@"%s",__func__);
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSLog(@"%s",__func__);
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     NSLog(@"%s",__func__);
 }
@@ -46,7 +38,15 @@
     NSLog(@"%s",__func__);
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"%s",__func__);
+}
+
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+    NSLog(@"%s",__func__);
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
     NSLog(@"%s",__func__);
 }
 

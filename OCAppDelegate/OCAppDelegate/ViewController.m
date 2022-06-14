@@ -21,5 +21,20 @@
     
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"touch 开始");
+    for (NSString *name in @[UIApplicationDidBecomeActiveNotification,
+                             UIApplicationDidEnterBackgroundNotification,
+                             UIApplicationDidFinishLaunchingNotification,
+                             UIApplicationWillResignActiveNotification,
+                             UIApplicationWillEnterForegroundNotification]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAppStateDidChange:) name:name object:nil];
+    }
+    NSLog(@"touch 结束");
+}
+
+- (void)handleAppStateDidChange:(NSNotification *)notification {
+    NSLog(@"====>>>>:%@",notification.name);
+}
 
 @end
