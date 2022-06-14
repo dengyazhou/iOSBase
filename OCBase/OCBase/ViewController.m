@@ -468,6 +468,16 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
+#pragma mark 66、applicationState
+//    UIApplicationState state = [UIApplication sharedApplication].applicationState;
+//    if (state == UIApplicationStateActive) {
+//        NSLog(@"UIApplicationStateActive");
+//    } else if (state == UIApplicationStateInactive) {
+//        NSLog(@"UIApplicationStateInactive");
+//    } else if (state == UIApplicationStateBackground) {
+//        NSLog(@"UIApplicationStateBackground");
+//    }
+    
 #pragma mark 65、测试一下数数的新电脑Temp
     
 #pragma mark 64、NSProcessInfo 进程相关

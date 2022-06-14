@@ -35,6 +35,14 @@
 
 - (void)handleAppStateDidChange:(NSNotification *)notification {
     NSLog(@"====>>>>:%@",notification.name);
+    UIApplicationState state = [UIApplication sharedApplication].applicationState;
+    if (state == UIApplicationStateActive) {
+        NSLog(@"====>>>>>>>:UIApplicationStateActive");
+    } else if (state == UIApplicationStateInactive) {
+        NSLog(@"====>>>>>>>:UIApplicationStateInactive");
+    } else if (state == UIApplicationStateBackground) {
+        NSLog(@"====>>>>>>>:UIApplicationStateBackground");
+    }
 }
 
 @end
