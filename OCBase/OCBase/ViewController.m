@@ -56,6 +56,7 @@
 #import "Protocol/XMRTCObj.h"
 #import "ExtensionViewController.h"
 #import "UUID/UUIDViewController.h"
+#import "CTTelephonyNetwork/CTTNViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -467,6 +468,33 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    dispatch_async_on_main_queue_dyz(^{
 //        NSLog(@"888");
 //    });
+    
+    
+    
+//    NSDictionary *dic = @{@"token":@"shushu"};
+////    NSDictionary *dic = @{@"token":@"TA_TOKEN",
+////                          @"projectId":@"TA_PROJECT_ID",
+////                          @"createParam":@"createParam"};
+//    NSString *str = dic.yy_modelToJSONString;
+//    NSLog(@"%@",str);
+//    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
+    
+
+    
+#pragma mark 69、 __IPHONE_12_0
+    
+#ifdef __IPHONE_12_0
+   
+#endif
+    
+#pragma mark 68、 @available 多少到多少可用
+//    if (@available(iOS 12.0, *)){
+//
+//    }
+    
+#pragma mark 67、
+    CTTNViewController *vc = [[CTTNViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 66、applicationState
 //    UIApplicationState state = [UIApplication sharedApplication].applicationState;
