@@ -480,6 +480,25 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+#pragma mark 73、宏定义 # 和 ##
+    // [https://www.jianshu.com/p/8e473060bcc1]
+#pragma mark 73、一个 # 号， 表示加双引号
+//#define kToString(x) #x //kToString(123) 等价于 "123" //显然，这个一个C字符串。 要想变成OC的字符串，还需要改进一下:
+//    char * str = kToString(abc);
+//    NSLog(@"===>>>:%s",str);
+    
+//#define kToString(x) @""#x //#define kToString(x) @#x //kToString(123) 等价于 @"123"
+//    NSString *str = kToString(name);
+//    NSLog(@"===>>>:%@",str);
+    
+#pragma mark 73、两个 ## 号， 表示连接
+//#define kConnect(x,y) x##y //kConnect(123,456) 等价于 123456
+//    NSString * kConnect(aa,bb) = @"abcd";
+//    NSLog(@"===>>>:%@",aabb);
+    
+#pragma mark 72、exit退出程序
+//    exit(0);
+    
 #pragma mark 71、pathExtension 取最后一个点之后的部分
 //    NSString *path = @"name.app.买票";
 //    NSLog(@"===>>>:%@",[path pathExtension]);
@@ -490,12 +509,12 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 #pragma mark 69、 __IPHONE_12_0
 //#ifdef __IPHONE_12_0
-//
+//    NSLog(@"====>>>>:__IPHONE_12_0");
 //#endif
     
 #pragma mark 68、 @available 多少到多少可用
 //    if (@available(iOS 12.0, *)){
-//
+//        NSLog(@"====>>>>:iOS 12.0");
 //    }
     
 #pragma mark 67、运营商
