@@ -58,6 +58,7 @@
 #import "UUID/UUIDViewController.h"
 #import "CTTelephonyNetwork/CTTNViewController.h"
 #import "PragmaClang/PragmaClangVC.h"
+#import "RegularExpression/REViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -1035,16 +1036,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    CGFloat min = [[array valueForKeyPath:@"@min.high"] integerValue];
     
 #pragma mark 17、NSRegularExpression 正则
-//    NSString *line = @"[12abc,[56ckj";
-//    NSRegularExpression *lineTimeRex = [NSRegularExpression regularExpressionWithPattern:@"\\[\\d+" options:0 error:nil];
-////    NSTextCheckingResult *ret = [lineTimeRex firstMatchInString:line options:0 range:NSMakeRange(0, line.length)];//返回一个
-////    NSString *lineTime = [line substringWithRange:ret.range];
-////    NSLog(@"%@",lineTime);
-//    NSArray *retArr = [lineTimeRex matchesInString:line options:0 range:NSMakeRange(0, line.length)];//返回数组
-//    for (NSTextCheckingResult *ret in retArr) {
-//        NSString *lineTime = [line substringWithRange:ret.range];
-//        NSLog(@"%@",lineTime);
-//    }
+    REViewController *vc = [[REViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 16、YYTextLayout 计算文本
 //    NSMutableAttributedString *contentText = [[NSMutableAttributedString alloc] initWithString:self.string];
