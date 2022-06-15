@@ -480,6 +480,26 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+#pragma mark 74、@try @catch @finally
+//    NSLog(@"====>>>:try-catch 开始");
+//    @try {
+//        NSLog(@"====>>>:try");
+////        NSArray *array = @[@"element",@"element1"];
+////        NSString *item = array[2];
+//    } @catch (NSException *exception) {
+//
+////        exception.name; // NSRangeException
+////        exception.reason; // *** -[__NSArrayI objectAtIndexedSubscript:]: index 2 beyond bounds [0 .. 1]
+////        exception.userInfo;
+////        exception.callStackReturnAddresses;
+////        exception.callStackSymbols;
+//
+//        NSLog(@"====>>>:@catch");
+//    } @finally {
+//        NSLog(@"====>>>:@finally");
+//    }
+//    NSLog(@"====>>>:try-catch 结束");
+    
 #pragma mark 73、宏定义 # 和 ##
     // [https://www.jianshu.com/p/8e473060bcc1]
 #pragma mark 73、一个 # 号， 表示加双引号
