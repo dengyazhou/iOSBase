@@ -480,10 +480,13 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+#pragma mark 71、pathExtension 取最后一个点之后的部分
+//    NSString *path = @"name.app.买票";
+//    NSLog(@"===>>>:%@",[path pathExtension]);
 
 #pragma mark 70、#pragma clang diagnostic
-    PragmaClangVC *vc = [[PragmaClangVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    PragmaClangVC *vc = [[PragmaClangVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 69、 __IPHONE_12_0
 //#ifdef __IPHONE_12_0
