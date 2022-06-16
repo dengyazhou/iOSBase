@@ -59,6 +59,7 @@
 #import "CTTelephonyNetwork/CTTNViewController.h"
 #import "PragmaClang/PragmaClangVC.h"
 #import "RegularExpression/REViewController.h"
+#import "keyChain/KCViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -471,8 +472,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        NSLog(@"888");
 //    });
     
-    
-    
+
 //    NSDictionary *dic = @{@"token":@"shushu"};
 ////    NSDictionary *dic = @{@"token":@"TA_TOKEN",
 ////                          @"projectId":@"TA_PROJECT_ID",
@@ -480,6 +480,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSString *str = dic.yy_modelToJSONString;
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
+    
+#pragma mark 75、keyChain 钥匙串
+    KCViewController *vc = [[KCViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 74、@try @catch @finally
 //    NSLog(@"====>>>:try-catch 开始");
@@ -1036,8 +1040,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    CGFloat min = [[array valueForKeyPath:@"@min.high"] integerValue];
     
 #pragma mark 17、NSRegularExpression 正则
-    REViewController *vc = [[REViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    REViewController *vc = [[REViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 16、YYTextLayout 计算文本
 //    NSMutableAttributedString *contentText = [[NSMutableAttributedString alloc] initWithString:self.string];
