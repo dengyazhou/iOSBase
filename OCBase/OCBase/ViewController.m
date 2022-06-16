@@ -61,6 +61,7 @@
 #import "RegularExpression/REViewController.h"
 #import "keyChain/KCViewController.h"
 #import "utsname/UTSViewController.h"
+#import "UIDevice/DeviceViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -482,9 +483,13 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
-#pragma mark 76、utsname
-    UTSViewController *vc = [[UTSViewController alloc] init];
+#pragma mark 77、UIDevice
+    DeviceViewController *vc = [[DeviceViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+    
+#pragma mark 76、utsname
+//    UTSViewController *vc = [[UTSViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 75、keyChain 钥匙串
 //    KCViewController *vc = [[KCViewController alloc] init];
