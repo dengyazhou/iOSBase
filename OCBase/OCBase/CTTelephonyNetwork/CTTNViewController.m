@@ -52,6 +52,8 @@
     
     CTCarrier *carrier = info.subscriberCellularProvider;
     NSLog(@"===>>> carrierName:%@",carrier.carrierName);
+    NSLog(@"===>>> mobileNetworkCode:%@",carrier.mobileNetworkCode);
+    NSLog(@"===>>> mobileCountryCode:%@",carrier.mobileCountryCode);
     
     
     NSLog(@"CTTelephonyNetworkInfo touch 结束");
