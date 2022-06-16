@@ -25,15 +25,20 @@
     self.title = @"Timer";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"timer block 来了");
-    }];
-    self.timer = timer;
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"timer block 来了");
+//    }];
+//    self.timer = timer;
     
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"Timer 开始");
+    
+#pragma mark CADisplayLink
+//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(timeRun)];
+//    link.preferredFramesPerSecond = 1;
+//    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 
 
 #pragma mark
