@@ -30,24 +30,28 @@
     NSLog(@"CTTelephonyNetworkInfo touch 开始");
     
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
-//    NSString *currentStatus = info.currentRadioAccessTechnology;
-//    if (@available(iOS 12.0, *)){
-//        NSDictionary *dic = info.serviceSubscriberCellularProviders;
-//    }
+    
+    NSString *currentStatus = info.currentRadioAccessTechnology;
+    NSLog(@"===>>> currentStatus:%@",currentStatus);
     
     if (@available(iOS 12.0, *)){
         
+        NSDictionary *dic = info.serviceSubscriberCellularProviders;
+        NSLog(@"allKeys:%@",dic.allKeys);
+        NSLog(@"allValues:%@",dic.allValues);
+        for (NSInteger i = 0; i < dic.allKeys.count; i++) {
+            CTCarrier *item = dic[dic.allKeys[i]];
+            NSLog(@"===>>>:%@",item.carrierName);
+        }
+        
     }
     
-#ifdef __IPHONE_12_0
-    NSDictionary *dic = info.serviceSubscriberCellularProviders;
-#endif
+//#ifdef __IPHONE_12_0
+    
+//#endif
     
     CTCarrier *carrier = info.subscriberCellularProvider;
     NSLog(@"===>>> carrierName:%@",carrier.carrierName);
-    
-    
-//    NSLog(@"===>>>:%@",currentStatus);
     
     
     NSLog(@"CTTelephonyNetworkInfo touch 结束");
