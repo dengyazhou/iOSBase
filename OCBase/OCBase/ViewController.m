@@ -549,8 +549,42 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 69、 __IPHONE_12_0
-//#ifdef __IPHONE_12_0
+//#if __IPHONE_12_0
 //    NSLog(@"====>>>>:__IPHONE_12_0");
+//#endif
+    
+#pragma mark 68、预处理宏
+    
+//#define            定义一个预处理宏
+//#undef            取消宏的定义
+//
+//#if                   编译预处理中的条件命令，相当于C语法中的if语句
+//#ifdef              判断某个宏是否被定义，若已定义，执行随后的语句
+//#ifndef            与#ifdef相反，判断某个宏是否未被定义
+//#elif                若#if, #ifdef, #ifndef或前面的#elif条件不满足，则执行#elif之后的语句，相当于C语法中的else-if
+//#else              与#if, #ifdef, #ifndef对应, 若这些条件不满足，则执行#else之后的语句，相当于C语法中的else
+//#endif             #if, #ifdef, #ifndef这些条件命令的结束标志.
+
+#pragma mark 68、TARGET_OS_IPHONE、TARGET_IPHONE_SIMULATOR、TARGET_OS_SIMULATOR
+    // TARGET_OS_IPHONE：是iPhone
+    // TARGET_IPHONE_SIMULATOR: 是iPhone 且是 模拟器
+    // TARGET_OS_SIMULATOR: 是模拟器
+//#if TARGET_OS_IPHONE
+//    NSLog(@"===>>>:TARGET_OS_IPHONE YES");
+//#else
+//    NSLog(@"===>>>:TARGET_OS_IPHONE NO");
+//#endif
+//
+//#if TARGET_IPHONE_SIMULATOR
+//    NSLog(@"===>>>:TARGET_IPHONE_SIMULATOR YES");
+//#else
+//    NSLog(@"===>>>:TARGET_IPHONE_SIMULATOR NO");
+//#endif
+//
+//#if TARGET_OS_SIMULATOR
+//    NSLog(@"===>>>:TARGET_OS_SIMULATOR YES");
+//#else
+//    NSLog(@"===>>>:TARGET_OS_SIMULATOR NO");
 //#endif
     
 #pragma mark 68、 @available 多少到多少可用
