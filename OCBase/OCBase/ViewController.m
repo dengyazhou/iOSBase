@@ -483,9 +483,15 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+#pragma mark 78、preferredLanguages
+    NSArray *array = [NSLocale preferredLanguages];
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"===>>>:%@",obj);
+    }];
+    
 #pragma mark 77、UIDevice
-    DeviceViewController *vc = [[DeviceViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    DeviceViewController *vc = [[DeviceViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 76、utsname
 //    UTSViewController *vc = [[UTSViewController alloc] init];
