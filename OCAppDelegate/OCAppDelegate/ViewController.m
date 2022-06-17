@@ -23,13 +23,25 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"touch 开始");
-    for (NSString *name in @[UIApplicationDidBecomeActiveNotification,
-                             UIApplicationDidEnterBackgroundNotification,
-                             UIApplicationDidFinishLaunchingNotification,
-                             UIApplicationWillResignActiveNotification,
-                             UIApplicationWillEnterForegroundNotification]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAppStateDidChange:) name:name object:nil];
+    
+#pragma mark 3、
+#if __IPHONE_13_0
+    NSLog(@"====>>>>:IPHONE 13_0");
+#endif
+    
+#pragma mark 2、@available 多少到多少可用
+    if (@available(iOS 12.0, *)){
+        NSLog(@"====>>>>:iOS 12.0");
     }
+    
+#pragma mark 1、UIApplication状态通知
+//    for (NSString *name in @[UIApplicationDidBecomeActiveNotification,
+//                             UIApplicationDidEnterBackgroundNotification,
+//                             UIApplicationDidFinishLaunchingNotification,
+//                             UIApplicationWillResignActiveNotification,
+//                             UIApplicationWillEnterForegroundNotification]) {
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAppStateDidChange:) name:name object:nil];
+//    }
     NSLog(@"touch 结束");
 }
 

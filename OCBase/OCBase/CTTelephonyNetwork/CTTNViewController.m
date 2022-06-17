@@ -46,7 +46,7 @@
         
     }
     
-//#ifdef __IPHONE_12_0
+//#if __IPHONE_12_0
     
 //#endif
     

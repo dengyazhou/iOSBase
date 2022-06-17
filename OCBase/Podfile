@@ -25,6 +25,6 @@ target 'OCBase' do
 #  pod 'MGJRouter'
 
 #  pod 'LookinServer', :configurations => ['Debug']
-#  pod 'LookinServer', :path => '../../xmly_yz/LookinServer'
+#  pod 'LookinServer', :path => '../../LookinServer'
 
 end

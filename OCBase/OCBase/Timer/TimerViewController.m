@@ -36,9 +36,9 @@
     NSLog(@"Timer 开始");
     
 #pragma mark CADisplayLink
-//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(timeRun)];
+    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick:)];
 //    link.preferredFramesPerSecond = 1;
-//    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 
 
 #pragma mark
@@ -56,6 +56,10 @@
 
 - (void)timeRun {
     NSLog(@"timeRun");
+}
+
+- (void)tick:(CADisplayLink *)link {
+    NSLog(@"====>>>:%f",link.timestamp);
 }
 
 - (void)dealloc {

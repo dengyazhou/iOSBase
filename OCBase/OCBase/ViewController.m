@@ -460,6 +460,11 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     CGSize size = [UIScreen mainScreen].bounds.size;
     NSLog(@"=====>>>>width:%@",@(size.width));
     
+//    dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL);
+//    dispatch_queue_get_label(<#dispatch_queue_t  _Nullable queue#>)
+    
+    
+    
         
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //        NSLog(@"结束啦");
@@ -484,10 +489,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
 #pragma mark 78、preferredLanguages
-    NSArray *array = [NSLocale preferredLanguages];
-    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"===>>>:%@",obj);
-    }];
+//    NSArray *array = [NSLocale preferredLanguages];
+//    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        NSLog(@"===>>>:%@",obj);
+//    }];
     
 #pragma mark 77、UIDevice
 //    DeviceViewController *vc = [[DeviceViewController alloc] init];
@@ -655,8 +660,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 56、Timer 释放
-//    TimerViewController *vc = [[TimerViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    TimerViewController *vc = [[TimerViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 55、MVP
 //    MVPViewController *vc = [[MVPViewController alloc] init];
