@@ -1037,14 +1037,12 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"====>>>>:%@",dateNow.description);
     
 #pragma mark 20、dateByAddingTimeInterval: date时间往后几秒的时间
-    NSDate *date = [NSDate date];
-    NSDate *date1 = [date dateByAddingTimeInterval:1];
-    NSTimeInterval timeInterval = [date timeIntervalSince1970];
-    NSTimeInterval timeInterval1 = [date1 timeIntervalSince1970];
-    NSLog(@"===>>>:%f",timeInterval);
-    NSLog(@"===>>>:%f",timeInterval1);
-    
-   
+//    NSDate *date = [NSDate date];
+//    NSDate *date1 = [date dateByAddingTimeInterval:1];
+//    NSTimeInterval timeInterval = [date timeIntervalSince1970];
+//    NSTimeInterval timeInterval1 = [date1 timeIntervalSince1970];
+//    NSLog(@"===>>>:%f",timeInterval);
+//    NSLog(@"===>>>:%f",timeInterval1);
 
 #pragma mark 19、yy_modelToJSONObject
 //    XMLiveStream *str = [[XMLiveStream alloc] init];
