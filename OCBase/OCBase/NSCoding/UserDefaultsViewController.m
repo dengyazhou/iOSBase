@@ -57,6 +57,21 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+#pragma mark 3、沙盒文件地址
+//    NSString *home = NSHomeDirectory();
+//    NSString *documents = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    NSString *library = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    
+#pragma mark 2、获取文件夹属性
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    __autoreleasing NSError *error;
+//    NSDictionary *dic = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
+//    NSLog(@"%@",dic);
+//    NSDate *date = [dic objectForKey:NSFileCreationDate];
+//    NSLog(@"%@",date);
+//    NSLog(@"%@",date.description);
+    
 #pragma mark 1、沙盒目录
     //1、Documents: 存放应用程序的数据 (苹果建议将程序中建立的或在程序中浏览到的文件数据保存在该目录下，iTunes备份和恢复的时候会包括此目录);
     //2、Library
