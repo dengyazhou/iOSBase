@@ -506,6 +506,14 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    KCViewController *vc = [[KCViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
+#pragma mark 74、@throw 抛出异常
+//    int a = 10;
+//    NSLog(@"throw: 开始");
+//    if (a > 3) {
+//        @throw [NSException exceptionWithName:@"a崩溃" reason:@"a > 3 所以崩溃" userInfo:nil];
+//    }
+//    NSLog(@"throw: 结束");
+    
 #pragma mark 74、@try @catch @finally
 //    NSLog(@"====>>>:try-catch 开始");
 //    @try {
@@ -660,8 +668,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 56、Timer 释放
-    TimerViewController *vc = [[TimerViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    TimerViewController *vc = [[TimerViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 55、MVP
 //    MVPViewController *vc = [[MVPViewController alloc] init];
