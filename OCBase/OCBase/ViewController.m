@@ -62,6 +62,7 @@
 #import "keyChain/KCViewController.h"
 #import "utsname/UTSViewController.h"
 #import "UIDevice/DeviceViewController.h"
+#import "Crash/ExceptionHandlerViewController.h""
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -504,6 +505,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 #pragma mark 75、keyChain 钥匙串
 //    KCViewController *vc = [[KCViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+#pragma mark 74、异常收集
+//    ExceptionHandlerViewController *vc = [[ExceptionHandlerViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 74、@throw 抛出异常
