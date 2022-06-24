@@ -489,6 +489,26 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+#pragma mark 79、stringByAddingPercentEncodingWithAllowedCharacters
+    //[https://www.jianshu.com/p/d30e1350adc8]
+//    URLFragmentAllowedCharacterSet  "#%<>[\]^`{|}
+//    URLHostAllowedCharacterSet      "#%/<>?@\^`{|}
+//    URLPasswordAllowedCharacterSet  "#%/:<>?@[\]^`{|}
+//    URLPathAllowedCharacterSet      "#%;<>?[\]^`{|}
+//    URLQueryAllowedCharacterSet     "#%<>[\]^`{|}
+//    URLUserAllowedCharacterSet      "#%/:<>?@[\]^`
+//    //1、正常使用方式
+//    NSString *string = @"123%123&123";
+//    NSCharacterSet * srti = [NSCharacterSet URLQueryAllowedCharacterSet];
+//    NSString * result = [string stringByAddingPercentEncodingWithAllowedCharacters:srti];
+//    NSLog(@"result: = %@",result);
+//    
+//    //2、手动指定方式
+//    NSString *charactersToEscape = @"`#%^{}\"[]|\\<>";
+//    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+//    result = [string stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+//    NSLog(@"result: = %@",result);
+    
 #pragma mark 78、preferredLanguages
 //    NSArray *array = [NSLocale preferredLanguages];
 //    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
