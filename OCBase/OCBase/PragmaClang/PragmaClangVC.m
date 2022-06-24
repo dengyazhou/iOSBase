@@ -54,6 +54,10 @@
 #pragma mark -Warc-performSelector-leaks
 //    -Warc-performSelector-leaks
     
+#pragma mark -Wincompatible-pointer-types
+    
+#pragma mark -Wstrict-prototypes
+    
     
 }
 
