@@ -648,11 +648,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 #pragma mark 64、NSProcessInfo 进程相关
 //    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-//    processInfo.processName;
-//    processInfo.hostName;
-//    processInfo.environment;
-//    processInfo.systemUptime;
-    
+//    NSLog(@"=====>>>>processName:%@",processInfo.processName);
+//    NSLog(@"=====>>>>hostName:%@",processInfo.hostName);
+//    NSLog(@"=====>>>>environment:%@",processInfo.environment);
+//    NSLog(@"=====>>>>systemUptime:%f",processInfo.systemUptime);//获取系统开机累计时间
 
 #pragma mark 62、扩展Extension
 //    ExtensionViewController *vc = [[ExtensionViewController alloc] init];
