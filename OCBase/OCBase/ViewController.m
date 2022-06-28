@@ -62,7 +62,9 @@
 #import "keyChain/KCViewController.h"
 #import "utsname/UTSViewController.h"
 #import "UIDevice/DeviceViewController.h"
-#import "Crash/ExceptionHandlerViewController.h""
+#import "Crash/ExceptionHandlerViewController.h"
+#import "OpenURL/OpenURLViewController.h"
+#import "Set/NSSetViewController.h"
 
 //void funcTest(int a);//C函数 函数申明
 
@@ -488,6 +490,14 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSString *str = dic.yy_modelToJSONString;
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
+    
+#pragma mark 79、NSSet
+//    NSSetViewController *vc = [[NSSetViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+#pragma mark 78、打开其他应用
+    OpenURLViewController *vc = [[OpenURLViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 79、stringByAddingPercentEncodingWithAllowedCharacters
     //[https://www.jianshu.com/p/d30e1350adc8]

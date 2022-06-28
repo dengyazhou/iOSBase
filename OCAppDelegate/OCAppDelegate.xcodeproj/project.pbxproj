@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5663087C8FA463D9438A284C /* Pods_OCAppDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04E693E18F5CEB563D619C8 /* Pods_OCAppDelegate.framework */; };
 		B60E0C4D2852DCE700E0D5D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E0C4C2852DCE700E0D5D8 /* AppDelegate.m */; };
 		B60E0C532852DCE700E0D5D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E0C522852DCE700E0D5D8 /* ViewController.m */; };
 		B60E0C562852DCE700E0D5D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60E0C542852DCE700E0D5D8 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E8D3B56A28060B8FC353367 /* Pods-OCAppDelegate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppDelegate.release.xcconfig"; path = "Target Support Files/Pods-OCAppDelegate/Pods-OCAppDelegate.release.xcconfig"; sourceTree = "<group>"; };
+		7BD2D3DA3E6854BB3683FA80 /* Pods-OCAppDelegate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppDelegate.debug.xcconfig"; path = "Target Support Files/Pods-OCAppDelegate/Pods-OCAppDelegate.debug.xcconfig"; sourceTree = "<group>"; };
+		A04E693E18F5CEB563D619C8 /* Pods_OCAppDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCAppDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60E0C482852DCE700E0D5D8 /* OCAppDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCAppDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60E0C4B2852DCE700E0D5D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B60E0C4C2852DCE700E0D5D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5663087C8FA463D9438A284C /* Pods_OCAppDelegate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E413886D88B0C2789CF12BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BD2D3DA3E6854BB3683FA80 /* Pods-OCAppDelegate.debug.xcconfig */,
+				5E8D3B56A28060B8FC353367 /* Pods-OCAppDelegate.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B60E0C3F2852DCE700E0D5D8 = {
 			isa = PBXGroup;
 			children = (
 				B60E0C4A2852DCE700E0D5D8 /* OCAppDelegate */,
 				B60E0C492852DCE700E0D5D8 /* Products */,
+				8E413886D88B0C2789CF12BA /* Pods */,
+				F6C07C15DD4194B0EE4F81A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +88,14 @@
 			path = OCAppDelegate;
 			sourceTree = "<group>";
 		};
+		F6C07C15DD4194B0EE4F81A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A04E693E18F5CEB563D619C8 /* Pods_OCAppDelegate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60E0C612852DCE900E0D5D8 /* Build configuration list for PBXNativeTarget "OCAppDelegate" */;
 			buildPhases = (
+				6DDEE1484E6CA76D8DD5F639 /* [CP] Check Pods Manifest.lock */,
 				B60E0C442852DCE700E0D5D8 /* Sources */,
 				B60E0C452852DCE700E0D5D8 /* Frameworks */,
 				B60E0C462852DCE700E0D5D8 /* Resources */,
+				0DBB93063B75253C4FB075B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DBB93063B75253C4FB075B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCAppDelegate/Pods-OCAppDelegate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCAppDelegate/Pods-OCAppDelegate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCAppDelegate/Pods-OCAppDelegate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DDEE1484E6CA76D8DD5F639 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCAppDelegate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B60E0C442852DCE700E0D5D8 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		B60E0C622852DCE900E0D5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD2D3DA3E6854BB3683FA80 /* Pods-OCAppDelegate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		B60E0C632852DCE900E0D5D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8D3B56A28060B8FC353367 /* Pods-OCAppDelegate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

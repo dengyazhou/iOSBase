@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03EFE85E5BFA370F69CFB10D /* Pods_OCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */; };
+		461588A3286AB2E50045B02F /* OpenURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461588A2286AB2E50045B02F /* OpenURLViewController.m */; };
+		461588A9286AF1720045B02F /* NSSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461588A8286AF1720045B02F /* NSSetViewController.m */; };
 		4667D8FA2861B2E200F80BA2 /* ExceptionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4667D8F92861B2E200F80BA2 /* ExceptionHandlerViewController.m */; };
 		9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2102835D606007AB258 /* ExtensionViewController.m */; };
 		9320C2142835D867007AB258 /* ExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2132835D867007AB258 /* ExtObject.m */; };
@@ -110,6 +112,10 @@
 /* Begin PBXFileReference section */
 		1927DCBE55A9F20112C03C3C /* Pods-TestOneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOneTests.release.xcconfig"; path = "Target Support Files/Pods-TestOneTests/Pods-TestOneTests.release.xcconfig"; sourceTree = "<group>"; };
 		3478FC44852B48D9F8B17E5E /* Pods-TestOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOne.debug.xcconfig"; path = "Target Support Files/Pods-TestOne/Pods-TestOne.debug.xcconfig"; sourceTree = "<group>"; };
+		461588A1286AB2E50045B02F /* OpenURLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenURLViewController.h; sourceTree = "<group>"; };
+		461588A2286AB2E50045B02F /* OpenURLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenURLViewController.m; sourceTree = "<group>"; };
+		461588A7286AF1720045B02F /* NSSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSetViewController.h; sourceTree = "<group>"; };
+		461588A8286AF1720045B02F /* NSSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSetViewController.m; sourceTree = "<group>"; };
 		4667D8F82861B2E200F80BA2 /* ExceptionHandlerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandlerViewController.h; sourceTree = "<group>"; };
 		4667D8F92861B2E200F80BA2 /* ExceptionHandlerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionHandlerViewController.m; sourceTree = "<group>"; };
 		46CF8CFEC51F792A1E23B56D /* Pods_TestOneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestOneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +328,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461588A0286AB2C60045B02F /* OpenURL */ = {
+			isa = PBXGroup;
+			children = (
+				461588A1286AB2E50045B02F /* OpenURLViewController.h */,
+				461588A2286AB2E50045B02F /* OpenURLViewController.m */,
+			);
+			path = OpenURL;
+			sourceTree = "<group>";
+		};
+		461588A6286AF15C0045B02F /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				461588A7286AF1720045B02F /* NSSetViewController.h */,
+				461588A8286AF1720045B02F /* NSSetViewController.m */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
 		4667D8F72861B29D00F80BA2 /* Crash */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +434,8 @@
 				B69B47D2282E4C8A0088740E /* RootViewController.m */,
 				B69B485E282E4C8B0088740E /* ViewController.h */,
 				B69B4816282E4C8A0088740E /* ViewController.m */,
+				461588A6286AF15C0045B02F /* Set */,
+				461588A0286AB2C60045B02F /* OpenURL */,
 				4667D8F72861B29D00F80BA2 /* Crash */,
 				B65CC593285B225E00341D14 /* UIDevice */,
 				B65CC58F285B1D0800341D14 /* utsname */,
@@ -957,6 +983,7 @@
 				B65CC592285B1D1F00341D14 /* UTSViewController.m in Sources */,
 				4667D8FA2861B2E200F80BA2 /* ExceptionHandlerViewController.m in Sources */,
 				B69B4899282E4C8B0088740E /* XMAdvancedQueue.m in Sources */,
+				461588A9286AF1720045B02F /* NSSetViewController.m in Sources */,
 				B69B488D282E4C8B0088740E /* KVOSumObject.m in Sources */,
 				B69B4879282E4C8B0088740E /* XMSonObj.m in Sources */,
 				B69B48C4282E4C8B0088740E /* HitTestViewController.m in Sources */,
@@ -1019,6 +1046,7 @@
 				B69B48A3282E4C8B0088740E /* InnerSonObject.m in Sources */,
 				B69B489F282E4C8B0088740E /* InnerManageISAViewController.mm in Sources */,
 				B69B48A1282E4C8B0088740E /* InnerPersonObject.m in Sources */,
+				461588A3286AB2E50045B02F /* OpenURLViewController.m in Sources */,
 				B69B48B0282E4C8B0088740E /* XMLiveBlockQueue.m in Sources */,
 				B69B488F282E4C8B0088740E /* NotificationViewController.m in Sources */,
 				B69B4886282E4C8B0088740E /* MVPModel.m in Sources */,
