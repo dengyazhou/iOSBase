@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1604"
             endingLineNumber = "1604"
-            landmarkName = "-flushImmediately:"
-            landmarkType = "7">
+            landmarkName = "ThinkingAnalyticsSDK"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

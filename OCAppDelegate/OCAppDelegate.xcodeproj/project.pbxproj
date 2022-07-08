@@ -50,7 +50,6 @@
 				7BD2D3DA3E6854BB3683FA80 /* Pods-OCAppDelegate.debug.xcconfig */,
 				5E8D3B56A28060B8FC353367 /* Pods-OCAppDelegate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
