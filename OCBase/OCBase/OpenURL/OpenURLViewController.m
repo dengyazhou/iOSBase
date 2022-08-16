@@ -32,7 +32,8 @@
 //    sleep(8);
     
     // OCSceneDelegate123
-    NSString *urlStr = @"OCSceneDelegate123://index?a=11&b=21";//@"OCAppDelegate://";//@"TATestiOS123://";//@"weixin://"
+//    NSString *urlStr = @"OCSceneDelegate123://index?a=11&b=21";//@"OCAppDelegate://";//@"TATestiOS123://";//@"weixin://"
+    NSString *urlStr = @"OCAppDelegate://index?a=11&b=21";
     NSURL *url = [NSURL URLWithString:urlStr];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         if (@available(iOS 10.0, *)) {//iOS 10之后

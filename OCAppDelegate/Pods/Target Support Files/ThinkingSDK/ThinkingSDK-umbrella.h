@@ -40,6 +40,7 @@
 #import "TDConstant.h"
 #import "TDPublicConfig.h"
 #import "TDAppState.h"
+#import "TAThreadSafeDictionary.h"
 #import "TDRunTime.h"
 #import "TDThirdPartyProtocol.h"
 #import "TDAESEncryptor.h"

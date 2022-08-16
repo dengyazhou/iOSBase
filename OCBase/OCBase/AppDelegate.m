@@ -41,8 +41,13 @@
                 NSLog(@"======>>>>:granted");
             }
             
+            if (nil == error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [application registerForRemoteNotifications];
+                });
+            }
         }];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
     }
     
     
@@ -77,7 +82,7 @@
 }
 
 // 推送消息回调
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler API_AVAILABLE(macos(10.14), ios(10.0), watchos(3.0)) API_UNAVAILABLE(tvos) {
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
     NSLog(@"%s",__func__);
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         // 远程推送消息处理
@@ -87,8 +92,52 @@
     completionHandler();
 }
 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification API_AVAILABLE(macos(10.14), ios(12.0)) API_UNAVAILABLE(watchos, tvos) {
-    NSLog(@"%s",__func__);
+//- (void)userNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(nullable UNNotification *)notification API_AVAILABLE(macos(10.14), ios(12.0)) API_UNAVAILABLE(watchos, tvos) {
+//    NSLog(@"%s",__func__);
+//}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    NSString *token;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 13.0) {
+        const unsigned *tokenBytes = [deviceToken bytes];
+        token = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                 ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                 ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                 ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    }else{
+        token = [[deviceToken description] stringByReplacingOccurrencesOfString:@"<" withString:@""];
+        token = [token stringByReplacingOccurrencesOfString:@">" withString:@""];
+        token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    NSLog(@"deviceToken == %@",token);
+
+//    NSArray *params = @[@{@"key" : @"SomeAdditionalID", @"value" : @4711},
+//                            @{@"key" : @"OtherID", @"value" : @"randomValue"}];
+//
+//    DTPushNotification *tpns = [DTPushNotification sharedInstance];
+//    if(tpns.isRegistered) {
+//        //Already registered no need to register again
+//        return;
+//    }
+//
+//    [tpns registerWithURL:[NSURL URLWithString:@"TPNS Endpoint"] //The different endpoints are defined in the TPNS_iOS.h file
+//                   appKey:@"APPKEY"
+//                pushToken:token
+//     additionalParameters:params
+//                  sandbox:YES
+//               completion:^(NSString * _Nullable deviceID, NSError * _Nullable error) {
+//                       if (error) {
+//                           //handle error
+//                           return;
+//                       }
+//                       //save the deviceID
+//                   }];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"%s",__FUNCTION__);
 }
 
 @end

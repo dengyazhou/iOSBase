@@ -7,6 +7,20 @@
 
 import UIKit
 
+extension Double {
+    //截断 到小数点后某一位
+    func truncate(places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return Double(Int(self * divisor)) / divisor
+    }
+    
+    //四舍五入 到小数点后某一位
+    func rounded(digits: Int) -> Double {
+        let multiplier = pow(10.0, Double(digits))
+        return (self * multiplier).rounded() / multiplier
+    }
+}
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -17,6 +31,25 @@ class HomeViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let total = Double(1)
+        print("total------:\(total)")
+        let arithmetic = (total/Double(3)).truncate(places: 3) //平均数
+        print("arithmetic------:\(arithmetic)")
+        let completedQuantity = arithmetic*Double(2)
+        print("completedQuantity------:\(completedQuantity)")
+        let num0 = total-completedQuantity
+        print("total-completedQuantity------:\(num0)")
+        let num1 = (total-completedQuantity).rounded(digits: 3)
+        print("total-completedQuantity------:\(num1)")
+        
+        let str = "hello你好123"
+        print("str:\(str)")
+        let str1 = str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        print("str1:\(str1!)")
+        let strUTF8 = str.utf8
+        print("strUTF8:\(strUTF8)")
+        
         // MARK: 10、枚举
 //        let vc = EnumViewController.init()
 //        self.navigationController?.pushViewController(vc, animated: true)
@@ -78,8 +111,8 @@ class HomeViewController: UIViewController {
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 26、泛型
-        let vc = GenericTypesViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = GenericTypesViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
         
         // MARK: 1、截取字符串
 //        let str = "ABCDEFGHIJKLMN"

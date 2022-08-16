@@ -460,13 +460,11 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"开始");
     
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    NSLog(@"=====>>>>width:%@",@(size.width));
+//    CGSize size = [UIScreen mainScreen].bounds.size;//当前屏幕的，如果屏幕横屏了，宽高也就对应的变了
+//    NSLog(@"====>>>> width:%@ height:%@",@(size.width),@(size.height));
     
 //    dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL);
 //    dispatch_queue_get_label(<#dispatch_queue_t  _Nullable queue#>)
-    
-    
     
         
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -491,13 +489,47 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"%@",str);
 //    {'token':TA_TOKEN, 'projectId':TA_PROJECT_ID, 'createParam':createParam}
     
+    
+//    double a = 1;
+//    double b = 0.666;
+//    double c = a - b;
+//    NSLog(@"%f",c);
+    
+#pragma mark 83、UTF8 和 PercentEncoding(百分号编码)
+    NSString *str = @"hello世界123";
+    NSLog(@"str:%@",str);
+    NSString *strEncoding =[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSLog(@"strEncoding:%@",strEncoding);
+    const char *c = "hello世界123";
+    NSString *strUTF8 = [NSString stringWithCString:c encoding:NSUTF8StringEncoding];
+//    NSString *strUTF8 = [str UTF8String];//错误 ❎
+    NSLog(@"strUTF8:%@",strUTF8);
+    
+    
+#pragma mark 82、goto
+//    goto label1;
+//    
+//label1:
+//    NSLog(@"===>>>:label2");
+#pragma mark 81、addEntriesFromDictionary
+//    NSMutableDictionary *dicM = [[NSMutableDictionary alloc] initWithDictionary:@{@"name":@"dengyazhou",@"age":@(10)}];
+//    NSDictionary *dictemp = @{@"age":@(20)};
+//    [dicM addEntriesFromDictionary:dictemp];
+//    NSLog(@"===>>>:%@",dicM);
+    
+    
+#pragma mark 80、instantiateViewControllerWithIdentifier
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"storyboarddyzId"];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
 #pragma mark 79、NSSet
 //    NSSetViewController *vc = [[NSSetViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 78、打开其他应用
-    OpenURLViewController *vc = [[OpenURLViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    OpenURLViewController *vc = [[OpenURLViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 79、stringByAddingPercentEncodingWithAllowedCharacters
     //[https://www.jianshu.com/p/d30e1350adc8]
@@ -524,6 +556,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //        NSLog(@"===>>>:%@",obj);
 //    }];
+    
+//    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//    NSLog(@"===>>>:%@",locale);
     
 #pragma mark 77、UIDevice
 //    DeviceViewController *vc = [[DeviceViewController alloc] init];
@@ -1000,10 +1035,10 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 //    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-////    formatter.timeZone = [NSTimeZone systemTimeZone];
-////    formatter.timeZone = [NSTimeZone localTimeZone];
-////    formatter.timeZone = [NSTimeZone defaultTimeZone];
-////    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+//    formatter.timeZone = [NSTimeZone systemTimeZone];
+//    formatter.timeZone = [NSTimeZone localTimeZone];
+//    formatter.timeZone = [NSTimeZone defaultTimeZone];
+//    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    formatter.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];//America/Chicago、Asia/Shanghai
 //    NSString *dateStr = [formatter stringFromDate:date];//把date 转化为formatter中对应时区所在 时间的字符串
 //    NSLog(@"===>>>:%@",dateStr);
