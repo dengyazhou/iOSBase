@@ -10,6 +10,11 @@
 		03EFE85E5BFA370F69CFB10D /* Pods_OCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9129B925A03124CE98CD66D9 /* Pods_OCBase.framework */; };
 		461588A3286AB2E50045B02F /* OpenURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461588A2286AB2E50045B02F /* OpenURLViewController.m */; };
 		461588A9286AF1720045B02F /* NSSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461588A8286AF1720045B02F /* NSSetViewController.m */; };
+		461A8C4C29DC22FD00DCCA74 /* EnumerationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461A8C4B29DC22FD00DCCA74 /* EnumerationViewController.m */; };
+		464F915629532A840027A533 /* PrintInteractionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F915429532A840027A533 /* PrintInteractionVC.m */; };
+		464F915729532A840027A533 /* PrintInteractionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 464F915529532A840027A533 /* PrintInteractionVC.xib */; };
+		465E4D1029D6FFBD004C1221 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 465E4D0F29D6FFBD004C1221 /* File */; };
+		465E4D2829DA8C70004C1221 /* NSObject+TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E4D2729DA8C70004C1221 /* NSObject+TDUtil.m */; };
 		4667D8FA2861B2E200F80BA2 /* ExceptionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4667D8F92861B2E200F80BA2 /* ExceptionHandlerViewController.m */; };
 		9320C2112835D606007AB258 /* ExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2102835D606007AB258 /* ExtensionViewController.m */; };
 		9320C2142835D867007AB258 /* ExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9320C2132835D867007AB258 /* ExtObject.m */; };
@@ -116,6 +121,14 @@
 		461588A2286AB2E50045B02F /* OpenURLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenURLViewController.m; sourceTree = "<group>"; };
 		461588A7286AF1720045B02F /* NSSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSetViewController.h; sourceTree = "<group>"; };
 		461588A8286AF1720045B02F /* NSSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSetViewController.m; sourceTree = "<group>"; };
+		461A8C4A29DC22FD00DCCA74 /* EnumerationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumerationViewController.h; sourceTree = "<group>"; };
+		461A8C4B29DC22FD00DCCA74 /* EnumerationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumerationViewController.m; sourceTree = "<group>"; };
+		464F915329532A840027A533 /* PrintInteractionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintInteractionVC.h; sourceTree = "<group>"; };
+		464F915429532A840027A533 /* PrintInteractionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintInteractionVC.m; sourceTree = "<group>"; };
+		464F915529532A840027A533 /* PrintInteractionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrintInteractionVC.xib; sourceTree = "<group>"; };
+		465E4D0F29D6FFBD004C1221 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		465E4D2629DA8C70004C1221 /* NSObject+TDUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TDUtil.h"; sourceTree = "<group>"; };
+		465E4D2729DA8C70004C1221 /* NSObject+TDUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TDUtil.m"; sourceTree = "<group>"; };
 		4667D8F82861B2E200F80BA2 /* ExceptionHandlerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandlerViewController.h; sourceTree = "<group>"; };
 		4667D8F92861B2E200F80BA2 /* ExceptionHandlerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionHandlerViewController.m; sourceTree = "<group>"; };
 		46C924BB287D8E78007E39A2 /* OCBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OCBase.entitlements; sourceTree = "<group>"; };
@@ -347,6 +360,25 @@
 			path = Set;
 			sourceTree = "<group>";
 		};
+		461A8C4929DC22D100DCCA74 /* Enumeration */ = {
+			isa = PBXGroup;
+			children = (
+				461A8C4A29DC22FD00DCCA74 /* EnumerationViewController.h */,
+				461A8C4B29DC22FD00DCCA74 /* EnumerationViewController.m */,
+			);
+			path = Enumeration;
+			sourceTree = "<group>";
+		};
+		464F915229532A3C0027A533 /* PrintInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				464F915329532A840027A533 /* PrintInteractionVC.h */,
+				464F915429532A840027A533 /* PrintInteractionVC.m */,
+				464F915529532A840027A533 /* PrintInteractionVC.xib */,
+			);
+			path = PrintInteraction;
+			sourceTree = "<group>";
+		};
 		4667D8F72861B29D00F80BA2 /* Crash */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +468,7 @@
 				B69B47D2282E4C8A0088740E /* RootViewController.m */,
 				B69B485E282E4C8B0088740E /* ViewController.h */,
 				B69B4816282E4C8A0088740E /* ViewController.m */,
+				461A8C4929DC22D100DCCA74 /* Enumeration */,
 				461588A6286AF15C0045B02F /* Set */,
 				461588A0286AB2C60045B02F /* OpenURL */,
 				4667D8F72861B29D00F80BA2 /* Crash */,
@@ -470,6 +503,7 @@
 				B69B4847282E4C8B0088740E /* AssociatedObject */,
 				B69B47F1282E4C8A0088740E /* Property */,
 				B69B47FD282E4C8A0088740E /* MultiThreading */,
+				464F915229532A3C0027A533 /* PrintInteraction */,
 				B69B4830282E4C8A0088740E /* XMChatReConnectStrategy.h */,
 				B69B485B282E4C8B0088740E /* XMChatActiveReconnectStrategy.h */,
 				B69B4825282E4C8A0088740E /* XMChatActiveReconnectStrategy.m */,
@@ -497,6 +531,8 @@
 				B69B480E282E4C8A0088740E /* XMAdvancedQueue.m */,
 				B69B485D282E4C8B0088740E /* XMTestOne.h */,
 				B69B4823282E4C8A0088740E /* XMTestOne.m */,
+				465E4D2629DA8C70004C1221 /* NSObject+TDUtil.h */,
+				465E4D2729DA8C70004C1221 /* NSObject+TDUtil.m */,
 				B69B4876282E4C8B0088740E /* xml-admin@3x.webp */,
 				B69B484C282E4C8B0088740E /* 默认头像1.png */,
 				B69B47FC282E4C8A0088740E /* 默认头像1@2x.png */,
@@ -506,6 +542,7 @@
 				B69B482C282E4C8A0088740E /* LaunchScreen.storyboard */,
 				B69B485C282E4C8B0088740E /* Info.plist */,
 				B69B4842282E4C8B0088740E /* main.m */,
+				465E4D0F29D6FFBD004C1221 /* File */,
 			);
 			path = OCBase;
 			sourceTree = "<group>";
@@ -905,12 +942,14 @@
 				B69B48BA282E4C8B0088740E /* 默认头像1.png in Resources */,
 				B69B48A9282E4C8B0088740E /* 默认头像1@3x.png in Resources */,
 				B69B4892282E4C8B0088740E /* 默认头像1@2x.png in Resources */,
+				465E4D1029D6FFBD004C1221 /* File in Resources */,
 				B69B48A6282E4C8B0088740E /* ntp.hosts in Resources */,
 				B69B48AB282E4C8B0088740E /* Main.storyboard in Resources */,
 				B69B48C5282E4C8B0088740E /* HitTestViewController.xib in Resources */,
 				B69B489A282E4C8B0088740E /* Assets.xcassets in Resources */,
 				B69B48AA282E4C8B0088740E /* LaunchScreen.storyboard in Resources */,
 				B69B48B5282E4C8B0088740E /* live_msg_list_anchor_tag@3x.webp in Resources */,
+				464F915729532A840027A533 /* PrintInteractionVC.xib in Resources */,
 				B69B48CD282E4C8B0088740E /* xml-admin@3x.webp in Resources */,
 				B69B48AC282E4C8B0088740E /* live_mic_user_mute@3x.webp in Resources */,
 			);
@@ -1000,6 +1039,7 @@
 				B69B4893282E4C8B0088740E /* MultiThreadingVC.m in Sources */,
 				B6DCF6B62858AFA7005C49C1 /* PragmaClangVC.m in Sources */,
 				B69B4897282E4C8B0088740E /* XMCopySong.m in Sources */,
+				465E4D2829DA8C70004C1221 /* NSObject+TDUtil.m in Sources */,
 				B69B487A282E4C8B0088740E /* TableViewController.m in Sources */,
 				B69B4896282E4C8B0088740E /* NSObject+XMMessageSend.m in Sources */,
 				B69B4883282E4C8B0088740E /* RunLoopViewController.m in Sources */,
@@ -1009,6 +1049,7 @@
 				B69B48CB282E4C8B0088740E /* BlockObj.m in Sources */,
 				B69B4890282E4C8B0088740E /* NotifiObject.m in Sources */,
 				B6DCF6B228588A21005C49C1 /* CTTNViewController.m in Sources */,
+				464F915629532A840027A533 /* PrintInteractionVC.m in Sources */,
 				B69B4882282E4C8B0088740E /* RootViewController.m in Sources */,
 				B69B4885282E4C8B0088740E /* MVPTableViewCell.m in Sources */,
 				B65CC596285B228400341D14 /* DeviceViewController.m in Sources */,
@@ -1022,6 +1063,7 @@
 				9320C2142835D867007AB258 /* ExtObject.m in Sources */,
 				B69B489B282E4C8B0088740E /* RunTimeViewController.m in Sources */,
 				B69B488C282E4C8B0088740E /* KVOPerson.m in Sources */,
+				461A8C4C29DC22FD00DCCA74 /* EnumerationViewController.m in Sources */,
 				B69B48B6282E4C8B0088740E /* Person+Chat.m in Sources */,
 				B69B4888282E4C8B0088740E /* Target_A.m in Sources */,
 				B69B48B7282E4C8B0088740E /* XMLiveRoomInfo.m in Sources */,
@@ -1209,7 +1251,44 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ta.testpush;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CTMediator\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"ios_ntp\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ime.OCBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1234,7 +1313,44 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ta.testpush;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CTMediator\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"ios_ntp\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ime.OCBase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

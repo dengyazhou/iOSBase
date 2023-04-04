@@ -112,15 +112,47 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "183"
             endingLineNumber = "183"
-            landmarkName = "-_applicationDidFinishLaunchingNotification:"
+            landmarkName = "+td_hookUserNotificationCenterDelegateMethod"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5343D01-31C2-4B94-A3C0-FCC5567B0C8C - 36bb8b8cb7c7c2cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TDAppLaunchReason observeValueForKeyPath:ofObject:change:context:]"
+                  moduleName = "ThinkingSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thinkingdata-yazhou/Desktop/td_yazhou/ios-sdk/ThinkingSDK/Source/AppLaunch/TDAppLaunchReason.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "E5343D01-31C2-4B94-A3C0-FCC5567B0C8C - 1d7f31bf01842dea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[TDAppLaunchReason td_hookUserNotificationCenterDelegateMethod]"
+                  moduleName = "ThinkingSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thinkingdata-yazhou/Desktop/td_yazhou/ios-sdk/ThinkingSDK/Source/AppLaunch/TDAppLaunchReason.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "84FDAE9F-73F7-4C9A-BA9E-ACEF8901BBED"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../../td_yazhou/ios-sdk/ThinkingSDK/Source/AppLaunch/TDAppLaunchReason.m"
@@ -128,39 +160,39 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "177"
             endingLineNumber = "177"
-            landmarkName = "-_applicationDidEnterBackgroundNotification:"
+            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0EA00F57-F264-42FF-81F5-DBBDD0599CB0"
+            uuid = "8CD40893-53B6-4A99-8A32-E9EE808A4670"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OCAppDelegate/AppDelegate.m"
+            filePath = "../../../td_yazhou/ios-sdk/ThinkingSDK/Source/AppLaunch/TDAppLaunchReason.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
-            landmarkType = "7">
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "TDAppLaunchReason"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "734F1428-9AC3-4CA4-81B4-A38579796519"
-            shouldBeEnabled = "No"
+            uuid = "26FCC655-08CF-41CB-91FC-F715AE9DBD0A"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCAppDelegate/AppDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "-application:didFailToRegisterForRemoteNotificationsWithError:"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

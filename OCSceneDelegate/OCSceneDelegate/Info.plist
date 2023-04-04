@@ -9,7 +9,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>OCSceneDelegate123</string>
+				<string>OCSceneDelegate</string>
 			</array>
 		</dict>
 	</array>

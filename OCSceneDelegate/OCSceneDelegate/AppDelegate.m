@@ -20,6 +20,7 @@
 }
 
 
+// 如果有SceneDelegate，这里不会来
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     NSLog(@"%s",__func__);
     

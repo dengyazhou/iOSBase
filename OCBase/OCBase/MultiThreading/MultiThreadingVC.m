@@ -64,7 +64,7 @@
 ////            MTThinkingAnalyticsSDK *instance = [MTThinkingAnalyticsSDK shareSDK1];
 //        });
 //    }
-    
+    dispatch_main();
 #pragma mark 10、栅栏函数
     /**
      非常重要的一点: 栅栏函数只能控制同一并发队列
@@ -121,27 +121,42 @@
     出组: dispatch_group_leave
     控制执行顺序
     */
-//    dispatch_group_t group = dispatch_group_create();
-//    dispatch_queue_t queue1 = dispatch_queue_create("队列1", DISPATCH_QUEUE_CONCURRENT);
-//    dispatch_queue_t queue2 = dispatch_queue_create("队列2", DISPATCH_QUEUE_CONCURRENT);
-//
-//    dispatch_group_enter(group);
-//    dispatch_async(queue1, ^{
-//        for (int i = 0; i < 5; i++) {
-//            NSLog(@"任务一 %d",i);
-//        }
-//        dispatch_group_leave(group);
-//    });
-//    dispatch_group_enter(group);
-//    dispatch_async(queue2, ^{
-//        for (int i = 0; i < 5; i++) {
-//            NSLog(@"任务二 %d",i);
-//        }
-//        dispatch_group_leave(group);
-//    });
-//    dispatch_group_notify(group, queue1, ^{
-//        NSLog(@"执行完毕");
-//    });
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue1 = dispatch_queue_create("队列1", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue2 = dispatch_queue_create("队列2", DISPATCH_QUEUE_CONCURRENT);
+
+    dispatch_group_enter(group);
+    dispatch_async(queue1, ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务一 %d",i);
+        }
+        dispatch_group_leave(group);
+    });
+    dispatch_group_enter(group);
+    dispatch_async(queue1, ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务二 %d",i);
+        }
+        dispatch_group_leave(group);
+    });
+    dispatch_group_enter(group);
+    dispatch_async(queue1, ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务三 %d",i);
+            sleep(2);
+        }
+        dispatch_group_leave(group);
+    });
+    dispatch_group_notify(group, queue2, ^{
+        NSLog(@"执行完毕");
+    });
+    
+    //由于任务三需要10秒执行完，而这里填的是4秒，所以会在第四秒的时候就执行NSLog(@"执行完毕 wait");。如果如果这里填的是12秒大于10秒，那么所有任务执行完，会立刻执行NSLog(@"执行完毕 wait");
+    //在指定的时间内，执行完所有的任务，返回为0，否则不为0
+    long ret = dispatch_group_wait(group, dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)));
+    NSLog(@"执行完毕 wait ret:%ld",ret);//
+    
+    
     
 #pragma mark 9、调度组 实例二
 //    dispatch_group_t group = dispatch_group_create();

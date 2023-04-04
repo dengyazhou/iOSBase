@@ -65,15 +65,12 @@
 #import "Crash/ExceptionHandlerViewController.h"
 #import "OpenURL/OpenURLViewController.h"
 #import "Set/NSSetViewController.h"
+#import "PrintInteraction/PrintInteractionVC.h"
+#import "EnumerationViewController.h"
+
+#import "KVOPerson.h"
 
 //void funcTest(int a);//C函数 函数申明
-
-typedef NS_OPTIONS(NSUInteger, YLOptions) {
-    YLOptionsTop           =  1 << 0,   // 0000 0001
-    YLOptionsBottom        =  1 << 1,   // 0000 0010
-    YLOptionsLeft          =  1 << 2,   // 0000 0100
-    YLOptionsRight         =  1 << 3,   // 0000 1000
-};
 
 #define __FILENAME__ (strrchr(__FILE__,'/')+1)
 
@@ -113,20 +110,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 
 @implementation ViewController
 
-- (void)optionsDemo:(YLOptions)type{
-    if (type & YLOptionsTop) {
-        NSLog(@"上  %ld",type & YLOptionsTop);
-    }
-    if (type & YLOptionsBottom) {
-        NSLog(@"下  %ld",type & YLOptionsBottom);
-    }
-    if (type & YLOptionsLeft) {
-        NSLog(@"左  %ld",type & YLOptionsLeft);
-    }
-    if (type & YLOptionsRight) {
-        NSLog(@"右  %ld",type & YLOptionsRight);
-    }
-}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -155,11 +139,17 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     // Do any additional setup after loading the view.
     self.string = @"你好啊邓亚洲哈哈哈邓哈哈哈 哈哈哈你说的对很对呵呵呵";
     
-    self.title = @"第二页";
+    self.title = @"第二页(ViewController)";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSLog(@"%s",__FUNCTION__);
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
+    label.backgroundColor = [UIColor redColor];
+    [self.view addSubview:label];
+    self.labelTitle = label;
+    
     
 #pragma mark UI =======================begin=======================
     
@@ -302,7 +292,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     dispatch_queue_set_specific(_ioQueueTest, _ioQueueTagTest, nonNullUnusedPointer, NULL);
     
     
-    NSLog(@"你好 喜马拉雅！");
+    NSLog(@"你好 ---！");
 //    self.person = [[Person alloc] init];
 //    char *abc = "abcd";
 //    void *context = abc;
@@ -325,7 +315,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
     
 //    [self p_timeRun];
 
-//    [self optionsDemo:YLOptionsTop|YLOptionsRight];
+    
     
     
 }
@@ -460,11 +450,39 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"开始");
     
+//    NSArray *array = @[@"UIViewController"];
+//    if ([array containsObject:NSStringFromClass([self class])]) {
+//        NSLog(@"====>>>>");
+//    } else {
+//        NSLog(@"====>>>>1");
+//    }
+    
+    
+    
+//    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:0];
+//    KVOPerson *obj = [array firstObject];
+//    NSLog(@"===>>>>崩溃吗?:%@",obj.name);
+    
 //    CGSize size = [UIScreen mainScreen].bounds.size;//当前屏幕的，如果屏幕横屏了，宽高也就对应的变了
 //    NSLog(@"====>>>> width:%@ height:%@",@(size.width),@(size.height));
     
 //    dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL);
 //    dispatch_queue_get_label(<#dispatch_queue_t  _Nullable queue#>)
+    
+//    NSDictionary *dic = @{@"key1":@"value1"};
+//    NSLog(@"dic:%@",dic);
+//    NSString *str = dic.yy_modelToJSONString;
+//    NSLog(@"str:%@",str);
+//    NSDictionary *dic1 = str;
+//    NSLog(@"dic1:%@",dic1);
+    
+    
+//    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithCapacity:0];
+//    dic[@"key1"] = @"value1";
+//    dic[@"key2"] = nil;
+    
+    
+//    NSLog(@"====>>>>:%@",dic);
     
         
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -495,15 +513,49 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    double c = a - b;
 //    NSLog(@"%f",c);
     
+#pragma mark 87、枚举
+    EnumerationViewController *vc = [[EnumerationViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
+    
+#pragma mark 86、IDFV
+//    UUIDViewController *vc = [[UUIDViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:true];
+    
+#pragma mark 85、打印
+//    PrintInteractionVC *vc = [[PrintInteractionVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:true];
+    
+#pragma mark 84、UTF8编码 打印 字节数，和字节内容。一个中文utf8占用3个字节，一个字母utf8占用1个字节，一个表情utf8占用4个字节
+//    NSData *dataUTF8 = [@"你你" dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"===UTF8>>>>:%@",dataUTF8);//ASCII码 https://tool.oschina.net/commons?type=4
+//    NSLog(@"===UTF8>>>>:%ld",dataUTF8.length);
+//
+//    NSData *dataUTF81 = [@"aa" dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"===UTF8>>>>:%ld",dataUTF81.length);
+//
+//    NSData *dataUTF82 = [@"🐴🐴" dataUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(@"===UTF8>>>>:%ld",dataUTF82.length);
+    
+//    //Unicode编码 打印 字节数，和字节内容。没有特定规律
+//    NSData *dataUnicode = [@"你" dataUsingEncoding:NSUnicodeStringEncoding];
+//    NSLog(@"===Unicode>>>>:%@",dataUnicode);
+//    NSLog(@"===Unicode>>>>:%ld",dataUnicode.length);
+//    
+//    NSData *dataUnicode1 = [@"a" dataUsingEncoding:NSUnicodeStringEncoding];
+//    NSLog(@"===Unicode>>>>:%ld",dataUnicode1.length);
+//    
+//    NSData *dataUnicode2 = [@"🐴" dataUsingEncoding:NSUnicodeStringEncoding];
+//    NSLog(@"===Unicode>>>>:%ld",dataUnicode2.length);
+    
 #pragma mark 83、UTF8 和 PercentEncoding(百分号编码)
-    NSString *str = @"hello世界123";
-    NSLog(@"str:%@",str);
-    NSString *strEncoding =[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    NSLog(@"strEncoding:%@",strEncoding);
-    const char *c = "hello世界123";
-    NSString *strUTF8 = [NSString stringWithCString:c encoding:NSUTF8StringEncoding];
-//    NSString *strUTF8 = [str UTF8String];//错误 ❎
-    NSLog(@"strUTF8:%@",strUTF8);
+//    NSString *str = @"hello世界123";
+//    NSLog(@"str:%@",str);
+//    NSString *strEncoding =[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+//    NSLog(@"strEncoding:%@",strEncoding);
+//    const char *c = "hello世界123";
+//    NSString *strUTF8 = [NSString stringWithCString:c encoding:NSUTF8StringEncoding];
+////    NSString *strUTF8 = [str UTF8String];//错误 ❎
+//    NSLog(@"strUTF8:%@",strUTF8);
     
     
 #pragma mark 82、goto
@@ -540,15 +592,16 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    URLQueryAllowedCharacterSet     "#%<>[\]^`{|}
 //    URLUserAllowedCharacterSet      "#%/:<>?@[\]^`
 //    //1、正常使用方式
-//    NSString *string = @"123%123&123";
+//    NSString *string = @"123%%123&123";
 //    NSCharacterSet * srti = [NSCharacterSet URLQueryAllowedCharacterSet];
 //    NSString * result = [string stringByAddingPercentEncodingWithAllowedCharacters:srti];
 //    NSLog(@"result: = %@",result);
-//    
+    
 //    //2、手动指定方式
 //    NSString *charactersToEscape = @"`#%^{}\"[]|\\<>";
+//    NSString *charactersToEscape = @"`#%^{}\"[]|\\<>&";
 //    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
-//    result = [string stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+//    NSString * result = [string stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
 //    NSLog(@"result: = %@",result);
     
 #pragma mark 78、preferredLanguages
@@ -556,9 +609,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 //        NSLog(@"===>>>:%@",obj);
 //    }];
-    
+//
 //    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-//    NSLog(@"===>>>:%@",locale);
+//    NSLog(@"===>>>last:%@",locale);
     
 #pragma mark 77、UIDevice
 //    DeviceViewController *vc = [[DeviceViewController alloc] init];
@@ -961,6 +1014,8 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //        <#code to be executed after a specified delay#>
 //    });
     
+    
+    
 #pragma mark 24、延迟调用 dispatch_after
 //    dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW, 2*NSEC_PER_SEC);
 //    dispatch_after(when, _ioQueueTest, ^{
@@ -1026,6 +1081,7 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSDate *date = [NSDate date];//默认是UTC(零时区)时间，手机系统时间改了，这个也跟着变，但是还是UTC(零时区)时间
 //    NSLog(@"===>>>:%@",date);//打印的是 手机系统设置时区的 时间，更改时区 这个值会变
 //    NSLog(@"===>>>:%@",date.description);//打印的是 UTC时间，更改时区 这个值不变，但是更改手机系统时间，这个就变了
+//    NSLog(@"==");
     
 #pragma mark 21、NSDateFormatter
     // 实例1
@@ -1071,21 +1127,33 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSLog(@"===>>>:%@",dateNow.description);
 //    NSLog(@"===>>>:%@",date1);
     
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss.SSS";
+//    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+//    [formatter setTimeZone:timeZone];
+//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[NSDate date] timeIntervalSince1970]];
+//    NSString *dateString = [formatter stringFromDate:date];
+//    NSLog(@"dateString:%@",dateString);
+    
+    
+//    timeFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//    timeFormatter.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];// http://events.jianshu.io/p/d6a793146451
+    
 #pragma mark iOS 世界标准时间UTC/GMT
     //默认都是UTC/GMT时间
 //    NSDate *date = [NSDate date];
 //    NSLog(@"===>>>date:%@",date);
 //    NSLog(@"===>>>description:%@",date.description);
 //    NSTimeZone *timeZoneUTC = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];//或GMT，UTC打印也是GMT
-////    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
-//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC);
+//    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC.description);//name:GMT,description:GMT (GMT) offset 0
+////    NSLog(@"name:%@,description:%@",timeZoneUTC.name,timeZoneUTC);
 //    NSTimeZone *timeZoneLocal = [NSTimeZone localTimeZone];
-////    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
-//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal);
+//    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal.description);//name:Asia/Shanghai,description:Local Time Zone (Asia/Shanghai (GMT+8) offset 28800)
+////    NSLog(@"name:%@,description:%@",timeZoneLocal.name,timeZoneLocal);
 //    NSInteger timeZoneUTCOffSet = [timeZoneUTC secondsFromGMTForDate:date];
 //    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneUTCOffSet);//timeZoneUTCOffSet:0
 //    NSInteger timeZoneLocalOffSet = [timeZoneLocal secondsFromGMTForDate:date];
-//    NSLog(@"timeZoneUTCOffSet:%ld",timeZoneLocalOffSet);//timeZoneUTCOffSet:28800
+//    NSLog(@"timeZoneLocalOffSet:%ld",timeZoneLocalOffSet);//timeZoneUTCOffSet:28800
 //
 //    NSDate *dateLocal = [[NSDate alloc] initWithTimeInterval:timeZoneLocalOffSet sinceDate:date];
 //    NSLog(@"===>>>:%@",dateLocal);
@@ -1398,9 +1466,9 @@ typedef NS_OPTIONS(NSUInteger, YLOptions) {
 //    NSDictionary *dic = @{@"progress":@64.4};
     // 方式一 错误
 //    self.labelTitle.text = [dic[@"progress"] stringValue];
-    // 方式二 错误
+//    // 方式二 错误
 //    self.labelTitle.text = [NSString stringWithFormat:@"%@", dic[@"progress"]];
-    // 方式三 正确
+//    // 方式三 正确
 //    double d = [dic[@"progress"] doubleValue];
 //    NSString *dStr = [NSString stringWithFormat:@"%f", d];
 //    NSDecimalNumber *dn = [NSDecimalNumber decimalNumberWithString:dStr];

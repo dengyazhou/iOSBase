@@ -22,6 +22,8 @@ extension Double {
 }
 
 class HomeViewController: UIViewController {
+    
+    var result: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,23 +34,35 @@ class HomeViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let total = Double(1)
-        print("total------:\(total)")
-        let arithmetic = (total/Double(3)).truncate(places: 3) //平均数
-        print("arithmetic------:\(arithmetic)")
-        let completedQuantity = arithmetic*Double(2)
-        print("completedQuantity------:\(completedQuantity)")
-        let num0 = total-completedQuantity
-        print("total-completedQuantity------:\(num0)")
-        let num1 = (total-completedQuantity).rounded(digits: 3)
-        print("total-completedQuantity------:\(num1)")
+//        let total = Double(1)
+//        print("total------:\(total)")
+//        let arithmetic = (total/Double(3)).truncate(places: 3) //平均数
+//        print("arithmetic------:\(arithmetic)")
+//        let completedQuantity = arithmetic*Double(2)
+//        print("completedQuantity------:\(completedQuantity)")
+//        let num0 = total-completedQuantity
+//        print("total-completedQuantity------:\(num0)")
+//        let num1 = (total-completedQuantity).rounded(digits: 3)
+//        print("total-completedQuantity------:\(num1)")
+//
+//        let str = "hello你好123"
+//        print("str:\(str)")
+//        let str1 = str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+//        print("str1:\(str1!)")
+//        let strUTF8 = str.utf8
+//        print("strUTF8:\(strUTF8)")
         
-        let str = "hello你好123"
-        print("str:\(str)")
-        let str1 = str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        print("str1:\(str1!)")
-        let strUTF8 = str.utf8
-        print("strUTF8:\(strUTF8)")
+//        result = ""
+        if let ret = result {
+            print("====>ret:\(ret)")
+        }
+        guard let ret = result else {
+            print("====>guard")
+            return
+        }
+        
+        print("====>:结束")
+        
         
         // MARK: 10、枚举
 //        let vc = EnumViewController.init()

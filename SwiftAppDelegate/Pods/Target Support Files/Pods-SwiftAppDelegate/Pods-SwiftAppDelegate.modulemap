@@ -1,0 +1,6 @@
+framework module Pods_SwiftAppDelegate {
+  umbrella header "Pods-SwiftAppDelegate-umbrella.h"
+
+  export *
+  module * { export * }
+}

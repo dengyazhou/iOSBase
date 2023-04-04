@@ -32,9 +32,9 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
-		<string>TATestiOS123</string>
 		<string>OCAppDelegate</string>
-		<string>OCSceneDelegate123</string>
+		<string>SwiftAppDelegate</string>
+		<string>SwiftSceneDelegate</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
